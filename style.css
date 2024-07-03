@@ -64,8 +64,8 @@ body {
 }
 
 .jumbotron {
-    background-color: #71b5ff;
-    color: white;
+    background-color: #95c1f000;
+    color: #95c1f000;
     padding: 60px 0;
 }
 
@@ -75,6 +75,8 @@ body {
     margin-bottom: 20px;
     text-align: center;
     font-size: 2em;
+    background-color: rgba(230, 233, 249, 0.92);
+    border-radius: 300%;
 }
 
 .card-deck .card {
@@ -217,7 +219,7 @@ body {
 }
 
 .copyright {
-    margin-top: 20px;
+    margin-top: 20%;
     font-size: 14px;
     text-align: center;
 }
@@ -250,6 +252,7 @@ body {
     background-position: center;
     color: #ffffff;
     margin-top: 50px;
+    border-radius: 50px;
 }
 
 .container.bg-image-1::before {
@@ -261,6 +264,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Cambia il colore e l'opacità come desideri */
     z-index: 1;
+    border-radius: 50px;
 }
 
 .container.bg-image-1 > * {
@@ -284,7 +288,7 @@ body {
     background-size: contain;
     position: relative;
     -webkit-text-stroke: 1px #4f90ab;
-    margin-top: 45px;
+    margin-top: 4%;
     filter: drop-shadow(0 0 2px rgba(255,255,255, 0.7)) drop-shadow(0 0 2px rgba(17, 65, 87, 0.7)) drop-shadow(0 0 30px rgba(141, 198, 223, 0.8)) drop-shadow(0 0 30px rgba(21, 62, 83, 0.8));
 }
 
@@ -324,4 +328,33 @@ body {
 .navbar{
     height: 60px;
     margin-top: 2px;
+    border-radius: 35px;
+}
+
+
+.footer_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    z-index: -1;
+}
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.paragrafo{
+    background-color: rgba(230, 233, 249, 0.92); 
+}
+
+.meil{
+    background-color: rgba(230, 233, 249, 0.92);
+    border-radius: 5px; 
 }
