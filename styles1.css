@@ -1,0 +1,120 @@
+body {
+    background-color: #f0f0f0;
+    color: #343a40;
+    justify-content: 10px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.jumbotron {
+    background-color: #0056b3;
+    color: white;
+}
+
+.section-title {
+    color: #0056b3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-deck .card {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 0;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+}
+.footer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .footer_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6; /* Opacity per rendere il video trasparente */
+    z-index: -1; /* Assicura che il video sia dietro al contenuto */
+  }
+  
+  
+  .footer_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente il contenuto */
+  }
+  
+  .c-footer {
+    width: 100%;
+  }
+  
+  .layout {
+    display: flex;
+  }
+  
+  .layout_item {
+    padding: 0 10px;
+  }
+  
+  .c-nav-tool {
+    border-left: 1px solid #fff; /* Linea divisoria a sinistra del menu */
+    padding-left: 10px; /* Spazio a sinistra del menu */
+  }
+  
+  .c-nav-tool_title {
+    margin-bottom: 10px;
+  }
+  
+  .c-nav-tool_list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .c-nav-tool_list li {
+    margin-bottom: 10px;
+  }
+  
+  .c-nav-tool_list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .c-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .c-link:hover {
+    color: #f0f0f0;
+  }
+  
+  .copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
