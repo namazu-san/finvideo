@@ -363,3 +363,6 @@ body {
     background-color: rgba(230, 233, 249, 0.92);
     border-radius: 5px; 
 }
+.navbar-collapse {
+    margin-right: 27em;
+}
