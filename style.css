@@ -95,13 +95,13 @@ body {
 
 .card-title,
 .card-text {
-    color: #fff; /* Colore del testo bianco */
+    color: #091542; /* Colore del testo bianco */
 }
 
 .card-body {
     position: relative;
     z-index: 1;
-    background-color: rgba(49, 46, 46, 0.59); /* Overlay scuro con opacità ridotta */
+    background-color: rgb(41 39 159 / 0%); /* Overlay scuro con opacità ridotta */
     padding: 20px;
     border-radius: 0 0 15px 15px;
     color: #fff; /* Colore del testo bianco */
