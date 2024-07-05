@@ -65,7 +65,7 @@ body {
 .jumbotron {
     background-color: #95c1f000;
     color: #95c1f000;
-    padding: 60px 0;
+    padding: 6.5em;
 }
 
 .section-title {
@@ -308,7 +308,7 @@ body {
     -webkit-text-fill-color: transparent;
     animation: shine 2s infinite;
     background-size: 200%;
-    margin-left: 25.5%;
+    margin-left: 23%;
 }
 
 @keyframes shine {
