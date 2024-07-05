@@ -348,8 +348,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100em;
+    height: 62.25em;
     object-fit: cover;
     z-index: -1;
 }
@@ -370,7 +370,7 @@ body {
 
 .bg-video2 {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .bg-video2 video {
@@ -395,7 +395,7 @@ body {
 
 .bg-video3 {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .bg-video3 video {
@@ -419,7 +419,7 @@ body {
 }
 .bg-video6 {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .bg-video6 video {
@@ -445,7 +445,7 @@ body {
 
 .bg-video7 {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .bg-video7 video {
@@ -470,7 +470,7 @@ body {
 
 .bg-video8 {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .bg-video8 video {
@@ -494,7 +494,7 @@ body {
 }
 .bg-video9 {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .bg-video9 video {
