@@ -366,3 +366,156 @@ body {
 .navbar-collapse {
     margin-right: 27em;
 }
+
+
+.bg-video2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video2 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    opacity: 0.7; /* Optional: to make the content more readable */
+}
+
+.bg-video2 .content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensure the text is readable over the video */
+}
+
+.bg-video3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video3 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    opacity: 0.7; /* Optional: to make the content more readable */
+}
+
+.bg-video3 .content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensure the text is readable over the video */
+}
+.bg-video6 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video6 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    opacity: 0.7; /* Optional: to make the content more readable */
+}
+
+.bg-video6 .content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensure the text is readable over the video */
+}
+
+
+.bg-video7 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video7 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    opacity: 0.7; /* Optional: to make the content more readable */
+}
+
+.bg-video7 .content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensure the text is readable over the video */
+}
+
+.bg-video8 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video8 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    opacity: 0.7; /* Optional: to make the content more readable */
+}
+
+.bg-video8 .content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensure the text is readable over the video */
+}
+.bg-video9 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video9 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    opacity: 0.7; /* Optional: to make the content more readable */
+}
+
+.bg-video9 .content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensure the text is readable over the video */
+}
+
+
+
