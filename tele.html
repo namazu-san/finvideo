@@ -1,38 +1,99 @@
 <!DOCTYPE html>
 <html lang="it">
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizi Telematici</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .about-area-custom {
+      padding: 60px 0;
+    }
+    .about-image-custom {
+      position: relative;
+    }
+    .about-image-custom video {
+      width: 100%;
+      height: auto;
+    }
+    .shape-custom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .about-content-custom {
+      padding: 20px;
+    }
+    .nav-custom .nav-link {
+      margin-right: 10px;
+    }
+    .custom-align-items-center {
+      display: flex;
+      align-items: center;
+      background-color: #82bdf900;
+    }
+    .container-servizi{
+        background-color: #f8fafb;
+    }
+  </style>
+</head>
 <body>
-
-<!-- Home Section -->
-<section id="servizi-telematici" class="jumbotron text-center container bg-video6">
-    <video autoplay muted loop id="bg-video6">
-        <source src="img/video6.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <h2 class="section-title">Servizi Telematici</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <h6 class="paragrafo">Grazie ad accordi commerciali con diversi partner, abbiamo creato un portale dove i rivenditori possono rivendere una serie di servizi che vanno dalle ricariche telefoniche al pagamento di bollette, dalla prenotazione biglietti alla visure della camera di commercio, e tanti altri servizi, evitando così file e spostamenti vari.</h6>
-            <p class="paragrafo">Inoltre, grazie ai propri tecnici qualificati, si garantisce ai propri rivenditori l'efficienza e la qualità dei servizi.</p>
+  <!-- Servizi Telematici Section -->
+  <section class="about-area-custom">
+    <div class="container-servizi">
+      <div class="row custom-align-items-center">
+        <div class="col-lg-6 col-12">
+          <div class="about-image-custom">
+            <svg class="shape-custom" width="106" height="134" viewBox="0 0 106 134" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <!-- SVG circles here -->
+            </svg>
+            <video autoplay muted loop>
+              <source src="img/video6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-        <div class="col-md-6">
-            <ul>
-                <li class="paragrafo"><strong>Ricariche Telefoniche</strong>: Nei nostri punti affiliati si possono ricaricare facilmente i telefoni cellulari di varie compagnie.</li>
-                <li class="paragrafo"><strong>Pagamento Bollette</strong>: Offri il servizio nel tuo locale e amplia il tuo business con un sistema certificato e sicuro.</li>
-                <li class="paragrafo"><strong>Ricarica Postepay</strong>: Si possono ricaricare comodamente tutte le carte Postepay.</li>
-                <li class="paragrafo"><strong>Servizi Postali</strong>: Gestiamo spedizioni e invii postali, inclusi lettere raccomandate e telegrammi.</li>
-                <li class="paragrafo"><strong>Spedizioni</strong>: Offriamo spedizioni nazionali e internazionali con ritiro senza costi aggiuntivi e sistema di tracking.</li>
-                <li class="paragrafo"><strong>Gift Card</strong>: Le migliori Gift Card da regalare o comprare per sé, attivabili online.</li>
-                <li class="paragrafo"><strong>Visure e Certificati</strong>: Accesso a banche dati ufficiali e servizi di certificazione da enti come Comune, Tribunale, e altri.</li>
-            </ul>
+        <div class="col-lg-6 col-12">
+          <div class="about-content-custom">
+            <h6 class="small-title text-lg">SERVIZI TELEMATICI</h6>
+            <h2 class="main-title fw-bold">Soluzioni Comode per la Tua Quotidianità</h2>
+            <div class="about-five-tab">
+              <nav>
+                <div class="nav nav-tabs nav-custom" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description"
+                    type="button" role="tab" aria-controls="nav-description" aria-selected="true">Descrizione</button>
+                  <button class="nav-link" id="nav-services-tab" data-bs-toggle="tab" data-bs-target="#nav-services"
+                    type="button" role="tab" aria-controls="nav-services" aria-selected="false">Servizi</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+                  <p>Grazie ad accordi commerciali con diversi partner, abbiamo creato un portale dove i rivenditori possono rivendere una serie di servizi che vanno dalle ricariche telefoniche al pagamento di bollette, dalla prenotazione biglietti alla visure della camera di commercio, e tanti altri servizi, evitando così file e spostamenti vari.</p>
+                  <p>Inoltre, grazie ai propri tecnici qualificati, si garantisce ai propri rivenditori l'efficienza e la qualità dei servizi.</p>
+                </div>
+                <div class="tab-pane fade" id="nav-services" role="tabpanel" aria-labelledby="nav-services-tab">
+                  <ul>
+                    <li><strong>Ricariche Telefoniche</strong>: Nei nostri punti affiliati si possono ricaricare facilmente i telefoni cellulari di varie compagnie.</li>
+                    <li><strong>Pagamento Bollette</strong>: Offri il servizio nel tuo locale e amplia il tuo business con un sistema certificato e sicuro.</li>
+                    <li><strong>Ricarica Postepay</strong>: Si possono ricaricare comodamente tutte le carte Postepay.</li>
+                    <li><strong>Servizi Postali</strong>: Gestiamo spedizioni e invii postali, inclusi lettere raccomandate e telegrammi.</li>
+                    <li><strong>Spedizioni</strong>: Offriamo spedizioni nazionali e internazionali con ritiro senza costi aggiuntivi e sistema di tracking.</li>
+                    <li><strong>Gift Card</strong>: Le migliori Gift Card da regalare o comprare per sé, attivabili online.</li>
+                    <li><strong>Visure e Certificati</strong>: Accesso a banche dati ufficiali e servizi di certificazione da enti come Comune, Tribunale, e altri.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

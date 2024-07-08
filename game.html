@@ -1,39 +1,99 @@
 <!DOCTYPE html>
 <html lang="it">
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizi Telematici</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .about-area-custom {
+      padding: 60px 0;
+    }
+    .about-image-custom {
+      position: relative;
+    }
+    .about-image-custom video {
+      width: 100%;
+      height: auto;
+    }
+    .shape-custom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .about-content-custom {
+      padding: 20px;
+    }
+    .nav-custom .nav-link {
+      margin-right: 10px;
+    }
+    .custom-align-items-center {
+      display: flex;
+      align-items: center;
+      background-color: #82bdf900;
+    }
+    .container-servizi{
+        background-color: #f8fafb;
+    }
+  </style>
+</head>
 <body>
+  <!-- Servizi Telematici Section -->
+  <section class="about-area-custom">
+    <div class="container-servizi">
+      <div class="row custom-align-items-center">
+        <div class="col-lg-6 col-12">
+          <div class="about-image-custom">
+            <svg class="shape-custom" width="106" height="134" viewBox="0 0 106 134" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <!-- SVG circles here -->
+            </svg>
+            <video autoplay muted loop>
+              <source src="img/video9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="about-content-custom">
+            <h6 class="small-title text-lg">GAMING</h6>
+            <h2 class="main-title fw-bold">Soluzioni Comode per la Tua Quotidianità</h2>
+            <div class="about-five-tab">
+              <nav>
+                <div class="nav nav-tabs nav-custom" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description"
+                    type="button" role="tab" aria-controls="nav-description" aria-selected="true">Descrizione</button>
+                  <button class="nav-link" id="nav-services-tab" data-bs-toggle="tab" data-bs-target="#nav-services"
+                    type="button" role="tab" aria-controls="nav-services" aria-selected="false">Servizi</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+                  <p>Grazie ad accordi commerciali con diversi partner, abbiamo creato un portale dove i rivenditori possono rivendere una serie di servizi che vanno dalle ricariche telefoniche al pagamento di bollette, dalla prenotazione biglietti alla visure della camera di commercio, e tanti altri servizi, evitando così file e spostamenti vari.</p>
+                  <p>Inoltre, grazie ai propri tecnici qualificati, si garantisce ai propri rivenditori l'efficienza e la qualità dei servizi.</p>
+                </div>
+                <div class="tab-pane fade" id="nav-services" role="tabpanel" aria-labelledby="nav-services-tab">
+                  <ul>
+                    <li><strong>Ricariche Telefoniche</strong>: Nei nostri punti affiliati si possono ricaricare facilmente i telefoni cellulari di varie compagnie.</li>
+                    <li><strong>Pagamento Bollette</strong>: Offri il servizio nel tuo locale e amplia il tuo business con un sistema certificato e sicuro.</li>
+                    <li><strong>Ricarica Postepay</strong>: Si possono ricaricare comodamente tutte le carte Postepay.</li>
+                    <li><strong>Servizi Postali</strong>: Gestiamo spedizioni e invii postali, inclusi lettere raccomandate e telegrammi.</li>
+                    <li><strong>Spedizioni</strong>: Offriamo spedizioni nazionali e internazionali con ritiro senza costi aggiuntivi e sistema di tracking.</li>
+                    <li><strong>Gift Card</strong>: Le migliori Gift Card da regalare o comprare per sé, attivabili online.</li>
+                    <li><strong>Visure e Certificati</strong>: Accesso a banche dati ufficiali e servizi di certificazione da enti come Comune, Tribunale, e altri.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Home Section -->
-<section id="gaming" class="jumbotron text-center container bg-video9">
-    <video autoplay muted loop id="bg-video9">
-        <source src="img/video9.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <h2 class="section-title">Sistema di Sicurezza</h2>
-    <h3 class="paragrafo">Help! È una centrale antifurto</h3><br>
-    <p class="paragrafo">Help! È una centrale antifurto che copre qualsiasi ambiente chiuso dai 10 Mq. a 400 Mq. senza nessun tipo di sensore e contatto, non avrai bisogno di nessun impianto; in 10 secondi è in grado di misurare l'intero perimetro dell'ambiente nel quale ti trovi. Help! non produce nessun tipo di rumore in vostra presenza, infatti siete liberi di muovervi e fare rumore all'interno del perimetro, ma un qualsiasi tentativo di scasso o effrazione di una porta o di una finestra e partirà l'allarme di Help!</p>
-    <p class="paragrafo">Help! Non richiede nessun tipo di installazione e nessun impianto e lo puoi portare sempre con te; non solo è in grado di monitorare la tua casa, ma se devi partire per una vacanza con la tua famiglia è in grado di controllare il perimetro della tua casa al mare, del tuo camper o roulotte e persino della tua macchina! Potrai dormire sonni più tranquilli grazie ad Help!</p><br><br>
-
-    <h3 class="paragrafo">Cos'è HELP Centrale di allarme ad onde subsoniche</h3><br>
-    <p class="paragrafo">Help! È una centrale antifurto che copre qualsiasi ambiente chiuso dai 10 Mq. a 400 Mq. senza nessun tipo di sensore e contatto, non avrai bisogno di nessun impianto; in 10 secondi è in grado di misurare l'intero perimetro dell'ambiente nel quale ti trovi. Help! non produce nessun tipo di rumore in vostra presenza, infatti siete liberi di muovervi e fare rumore all'interno del perimetro, ma un qualsiasi tentativo di scasso o effrazione di una porta o di una finestra e partirà l'allarme di Help!</p>
-    <p class="paragrafo">Potrai dormire sonni più tranquilli grazie ad Help! Inoltre, con Help! hai la possibilità di scegliere di far suonare l'allarme così da far spaventare e scappare i ladri e allo stesso tempo di inviare un sms oppure puoi decidere di tenere un allarme silenzioso e inviare un sms di aiuto alle persone e alla forze dell'ordine precedentemente programmate. Potrai anche consultare il "memoria eventi" del sistema per sapere l'ora e il giorno esatti dell'attivazione dell'allarme.</p><br><br>
-
-    <h3 class="paragrafo">Caratteristiche tecniche di Help</h3><br>
-    <p class="paragrafo">Help! ha ben 80 linee radio supervisionate e un combinatore GMS integrato; l'attivazione totale avviene con un telecomando o un tastierino integrato. Help! ha un display LCD retroilluminato, zone configurabili, memoria di allarme con date e ora; Help! è dotato di un modulo che avvisa della mancanza della rete elettrica e ha due telecomandi con tecnologia rolling code anticollisione.</p><br><br>
-
-    <h3 class="paragrafo">HELP antifurto, massima tecnologia in libertà!</h3><br>
-    <p class="paragrafo">Help funziona attraverso la tecnologia delle onde subsoniche, questo significa che non necessita di sensori, telecamere, fili o impianti particolari. Il suo settaggio avviene in 10 secondi, il tempo necessario a calcolare la superficie da controllare. Help non necessita di installazione ed è portatile. Help! Non richiede nessun tipo di installazione e nessun impianto e lo puoi portare sempre con te; non solo è in grado di monitorare la tua casa, ma se devi partire per una vacanza con la tua famiglia è in grado di controllare il perimetro della tua casa al mare, del tuo camper o roulotte e persino della tua macchina!</p><br><br>
-
-    <h3 class="paragrafo">HELP è soggetto a importanti detrazioni fiscali</h3><br>
-    <p class="paragrafo">Help! rientra nel bonus fiscale per le ristrutturazioni edilizie, come previsto dalla Legge di Stabilità del 2013 per le spese sostenute per la protezione e la sicurezza. Il bonus opera sotto forma di detrazione dell'IRPEF delle spese sostenute per interventi di ristrutturazione delle abitazioni (Casa Sicura) e delle parti comuni negli edifici residenziali (Condominio Sicuro). La detrazione è ripartita in dieci quote annuali costanti e di pari importo nell'anno di sostenimento delle spese e in quelli successivi.</p><br><br>
-</section>
-
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

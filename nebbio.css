@@ -7,9 +7,6 @@ body {
 
 }
 
-h1.display-4 {
-    font-size: 7.5rem;  
-}
 
 .display-4 {
     transform: translate(0, 10%);
@@ -24,7 +21,7 @@ h1.display-4 {
     
 }
 .label {
-    padding: 0.1em;
+    padding: 0.2em;
 }
 
 .animation {
@@ -64,17 +61,11 @@ h1.display-4 {
 .navbar {
     margin-bottom: 20px;
 }
-#home{
-    background-color: #82bdf900;
 
-}
 .jumbotron {
-
-    margin-bottom: 2rem;
-    border-radius: .3rem;
+    background-color: #95c1f000;
     color: #95c1f000;
     padding: 60px 0;
-    
 }
 
 .section-title {
@@ -104,13 +95,13 @@ h1.display-4 {
 
 .card-title,
 .card-text {
-    color: #091542; /* Colore del testo bianco */
+    color: #fff; /* Colore del testo bianco */
 }
 
 .card-body {
     position: relative;
     z-index: 1;
-    background-color: rgb(41 39 159 / 0%); /* Overlay scuro con opacità ridotta */
+    background-color: rgba(49, 46, 46, 0.59); /* Overlay scuro con opacità ridotta */
     padding: 20px;
     border-radius: 0 0 15px 15px;
     color: #fff; /* Colore del testo bianco */
@@ -160,7 +151,7 @@ h1.display-4 {
 }
 
 .footer {
-    background-color: #71b5ff99;
+    background-color: rgba(249, 244, 244, 0.65);
     color: white;
     padding: 2em;
     position: relative;
@@ -262,7 +253,7 @@ h1.display-4 {
     color: #ffffff;
     margin-top: 50px;
     border-radius: 50px;
-    background-color: rgb(253 250 250 / 72%);
+    background-color: rgba(249, 244, 244, 0.65);
     padding: 3%;
 }
 
@@ -273,7 +264,7 @@ h1.display-4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(219 210 210 / 0%); /* Cambia il colore e l'opacità come desideri */
+    background-color: rgba(249, 244, 244, 0.65); /* Cambia il colore e l'opacità come desideri */
     z-index: 1;
     border-radius: 50px;
 }
@@ -309,15 +300,15 @@ h1.display-4 {
     background: linear-gradient(
         45deg,
         rgba(255, 255, 255, 0) 45%,
-        rgba(67, 40, 216, 0.8) 50%,
+        rgba(255, 255, 255, 0.8) 50%,
         rgba(255, 255, 255, 0) 55%,
         rgba(255, 255, 255, 0) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 20s infinite;
+    animation: shine 2s infinite;
     background-size: 200%;
-    margin-left: 2.5%;
+    margin-left: 21em;
 }
 
 @keyframes shine {
@@ -339,8 +330,8 @@ h1.display-4 {
 
 .navbar{
     height: 60px;
-    margin-top: 0.01em;
-    border-radius: 0em 0em 1em 1em;
+    margin-top: 2px;
+    border-radius: 35px;
 }
 
 
@@ -359,25 +350,63 @@ h1.display-4 {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     z-index: -1;
-    background-color: #82bdf900;
 }
 .paragrafo{
     background-color: rgba(230, 233, 249, 0.92);
     border-radius: 0.5em;
     padding: 1em; 
+    color: black;
 }
 
 .meil{
     background-color: rgba(230, 233, 249, 0.92);
     border-radius: 5px; 
 }
-.navbar-collapse {
-    margin-right: 27em;
+
+
+#nebbiogeno {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Ensure the text is readable */
+}
+#bg-video2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+    /* The video will be visible only in the right half */
 }
 
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for better text readability */
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    /* The content will be visible only in the left half */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
 .bg-video2 {
     position: relative;
     overflow: hidden;
@@ -402,129 +431,3 @@ h1.display-4 {
     z-index: 1;
     color: white; /* Ensure the text is readable over the video */
 }
-
-.bg-video3 {
-    position: relative;
-    overflow: hidden;
-}
-
-.bg-video3 video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    opacity: 0.7; /* Optional: to make the content more readable */
-}
-
-.bg-video3 .content {
-    position: relative;
-    z-index: 1;
-    color: white; /* Ensure the text is readable over the video */
-}
-.bg-video6 {
-    position: relative;
-    overflow: hidden;
-}
-
-.bg-video6 video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    opacity: 0.7; /* Optional: to make the content more readable */
-}
-
-.bg-video6 .content {
-    position: relative;
-    z-index: 1;
-    color: white; /* Ensure the text is readable over the video */
-}
-
-
-.bg-video7 {
-    position: relative;
-    overflow: hidden;
-}
-
-.bg-video7 video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    opacity: 0.7; /* Optional: to make the content more readable */
-}
-
-.bg-video7 .content {
-    position: relative;
-    z-index: 1;
-    color: white; /* Ensure the text is readable over the video */
-}
-
-.bg-video8 {
-    position: relative;
-    overflow: hidden;
-}
-
-.bg-video8 video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    opacity: 0.7; /* Optional: to make the content more readable */
-}
-
-.bg-video8 .content {
-    position: relative;
-    z-index: 1;
-    color: white; /* Ensure the text is readable over the video */
-}
-.bg-video9 {
-    position: relative;
-    overflow: hidden;
-}
-
-.bg-video9 video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    opacity: 0.7; /* Optional: to make the content more readable */
-}
-
-.bg-video9 .content {
-    position: relative;
-    z-index: 1;
-    color: white; /* Ensure the text is readable over the video */
-}
-
-
