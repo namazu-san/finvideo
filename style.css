@@ -307,7 +307,7 @@ h1.display-4 {
     position: absolute;
     left: 0;
     background: linear-gradient(
-        45deg,
+        15deg,
         rgba(255, 255, 255, 0) 45%,
         rgba(67, 40, 216, 0.8) 50%,
         rgba(255, 255, 255, 0) 55%,
@@ -315,7 +315,7 @@ h1.display-4 {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 20s infinite;
+    animation: shine 2s infinite;
     background-size: 200%;
     margin-left: 2.5%;
 }
