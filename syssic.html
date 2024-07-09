@@ -33,31 +33,30 @@
       align-items: center;
       background-color: #82bdf900;
     }
-    .container-sic{
-        background-color: #f8fafb;
+    .container-sic {
+      background-color: #f8fafb;
     }
-    #sicu{
+    #sicu {
       padding: 1em;
-
     }
-    #sic{
+    #sic {
       border-radius: 4em;
-
+      margin-left: 1em;
     }
   </style>
 </head>
 <body>
   <!-- Sistema di Sicurezza Section -->
-  <section class="about-area-custom">
+  <section id="sicu" class="about-area-custom">
     <div class="container-sic">
-      <div id="sicu" class="row custom-align-items-center">
+      <div  class="row custom-align-items-center">
         <div class="col-lg-6 col-12">
           <div class="about-image-custom">
             <svg class="shape-custom" width="106" height="134" viewBox="0 0 106 134" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <!-- SVG circles here -->
             </svg>
-            <video  id="sic" autoplay muted loop>
+            <video id="sic" autoplay muted loop>
               <source src="img/video5.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -70,14 +69,10 @@
             <div class="about-five-tab">
               <nav>
                 <div class="nav nav-tabs nav-custom" id="nav-tab" role="tablist">
-                  <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description"
-                    type="button" role="tab" aria-controls="nav-description" aria-selected="true">Descrizione</button>
-                  <button class="nav-link" id="nav-features-tab" data-bs-toggle="tab" data-bs-target="#nav-features"
-                    type="button" role="tab" aria-controls="nav-features" aria-selected="false">Caratteristiche</button>
-                  <button class="nav-link" id="nav-benefits-tab" data-bs-toggle="tab" data-bs-target="#nav-benefits"
-                    type="button" role="tab" aria-controls="nav-benefits" aria-selected="false">Benefici</button>
-                  <button class="nav-link" id="nav-tax-tab" data-bs-toggle="tab" data-bs-target="#nav-tax"
-                    type="button" role="tab" aria-controls="nav-tax" aria-selected="false">Detrazioni Fiscali</button>
+                  <button class="nav-link active" id="nav-description-tab" type="button" role="tab" aria-controls="nav-description" aria-selected="true">Descrizione</button>
+                  <button class="nav-link" id="nav-features-tab" type="button" role="tab" aria-controls="nav-features" aria-selected="false">Caratteristiche</button>
+                  <button class="nav-link" id="nav-benefits-tab" type="button" role="tab" aria-controls="nav-benefits" aria-selected="false">Benefici</button>
+                  <button class="nav-link" id="nav-tax-tab" type="button" role="tab" aria-controls="nav-tax" aria-selected="false">Detrazioni Fiscali</button>
                 </div>
               </nav>
               <div class="tab-content" id="nav-tabContent">
@@ -105,5 +100,24 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#nav-tab button').on('click', function () {
+        // Rimuove la classe 'active' da tutti i bottoni
+        $('#nav-tab button').removeClass('active');
+        // Aggiunge la classe 'active' al bottone cliccato
+        $(this).addClass('active');
+        
+        // Ottiene l'ID della sezione da mostrare
+        var target = $(this).attr('aria-controls');
+        
+        // Rimuove le classi 'show active' da tutte le sezioni
+        $('.tab-pane').removeClass('show active');
+        
+        // Aggiunge le classi 'show active' alla sezione target
+        $('#' + target).addClass('show active');
+      });
+    });
+  </script>
 </body>
 </html>
