@@ -53,29 +53,29 @@
             <h2 class="main-title fw-bold">Facilità e Sicurezza nei Pagamenti</h2>
             <div class="about-five-tab">
               <nav>
-                <div class="nav nav-tabs nav-custom" id="nav-tab" role="tablist">
-                  <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description"
-                    type="button" role="tab" aria-controls="nav-description" aria-selected="true">Descrizione</button>
-                  <button class="nav-link" id="nav-features-tab" data-bs-toggle="tab" data-bs-target="#nav-features"
-                    type="button" role="tab" aria-controls="nav-features" aria-selected="false">Caratteristiche</button>
-                  <button class="nav-link" id="nav-benefits-tab" data-bs-toggle="tab" data-bs-target="#nav-benefits"
-                    type="button" role="tab" aria-controls="nav-benefits" aria-selected="false">Benefici</button>
-                  <button class="nav-link" id="nav-tax-tab" data-bs-toggle="tab" data-bs-target="#nav-tax"
-                    type="button" role="tab" aria-controls="nav-tax" aria-selected="false">Detrazioni Fiscali</button>
+                <div class="nav nav-tabs nav-custom" id="nav-tab-paga" role="tablist">
+                  <button class="nav-link active" id="nav-description-tab-paga" data-bs-toggle="tab" data-bs-target="#nav-description"
+                    type="button" role="tab" aria-controls="nav-description-paga" aria-selected="true">Descrizione</button>
+                  <button class="nav-link" id="nav-features-tab-paga" data-bs-toggle="tab" data-bs-target="#nav-features"
+                    type="button" role="tab" aria-controls="nav-features-paga" aria-selected="false">Caratteristiche</button>
+                  <button class="nav-link" id="nav-benefits-tab-paga" data-bs-toggle="tab" data-bs-target="#nav-benefits"
+                    type="button" role="tab" aria-controls="nav-benefits-paga" aria-selected="false">Benefici</button>
+                  <button class="nav-link" id="nav-tax-tab-paga" data-bs-toggle="tab" data-bs-target="#nav-tax"
+                    type="button" role="tab" aria-controls="nav-tax-paga" aria-selected="false">Detrazioni Fiscali</button>
                 </div>
               </nav>
-              <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+              <div class="tab-content" id="nav-tabContent-paga">
+                <div class="tab-pane fade show active" id="nav-description-paga" role="tabpanel" aria-labelledby="nav-description-tab-paga">
                   <p>Help! È una centrale antifurto che copre qualsiasi ambiente chiuso dai 10 Mq. a 400 Mq. senza nessun tipo di sensore e contatto, non avrai bisogno di nessun impianto; in 10 secondi è in grado di misurare l'intero perimetro dell'ambiente nel quale ti trovi. Help! non produce nessun tipo di rumore in vostra presenza, infatti siete liberi di muovervi e fare rumore all'interno del perimetro, ma un qualsiasi tentativo di scasso o effrazione di una porta o di una finestra e partirà l'allarme di Help!</p>
                   <p>Help! Non richiede nessun tipo di installazione e nessun impianto e lo puoi portare sempre con te; non solo è in grado di monitorare la tua casa, ma se devi partire per una vacanza con la tua famiglia è in grado di controllare il perimetro della tua casa al mare, del tuo camper o roulotte e persino della tua macchina! Potrai dormire sonni più tranquilli grazie ad Help!</p>
                 </div>
-                <div class="tab-pane fade" id="nav-features" role="tabpanel" aria-labelledby="nav-features-tab">
+                <div class="tab-pane fade" id="nav-features-paga" role="tabpanel" aria-labelledby="nav-features-tab-paga">
                   <p>Help! ha ben 80 linee radio supervisionate e un combinatore GMS integrato; l'attivazione totale avviene con un telecomando o un tastierino integrato. Help! ha un display LCD retroilluminato, zone configurabili, memoria di allarme con date e ora; Help! è dotato di un modulo che avvisa della mancanza della rete elettrica e ha due telecomandi con tecnologia rolling code anticollisione.</p>
                 </div>
-                <div class="tab-pane fade" id="nav-benefits" role="tabpanel" aria-labelledby="nav-benefits-tab">
+                <div class="tab-pane fade" id="nav-benefits-paga" role="tabpanel" aria-labelledby="nav-benefits-tab-paga">
                   <p>Help funziona attraverso la tecnologia delle onde subsoniche, questo significa che non necessita di sensori, telecamere, fili o impianti particolari. Il suo settaggio avviene in 10 secondi, il tempo necessario a calcolare la superficie da controllare. Help non necessita di installazione ed è portatile. Help! Non richiede nessun tipo di installazione e nessun impianto e lo puoi portare sempre con te; non solo è in grado di monitorare la tua casa, ma se devi partire per una vacanza con la tua famiglia è in grado di controllare il perimetro della tua casa al mare, del tuo camper o roulotte e persino della tua macchina!</p>
                 </div>
-                <div class="tab-pane fade" id="nav-tax" role="tabpanel" aria-labelledby="nav-tax-tab">
+                <div class="tab-pane fade" id="nav-tax-paga" role="tabpanel" aria-labelledby="nav-tax-tab-paga">
                   <p>Help! rientra nel bonus fiscale per le ristrutturazioni edilizie, come previsto dalla Legge di Stabilità del 2013 per le spese sostenute per la protezione e la sicurezza. Il bonus opera sotto forma di detrazione dell'IRPEF delle spese sostenute per interventi di ristrutturazione delle abitazioni (Casa Sicura) e delle parti comuni negli edifici residenziali (Condominio Sicuro). La detrazione è ripartita in dieci quote annuali costanti e di pari importo nell'anno di sostenimento delle spese e in quelli successivi.</p>
                 </div>
               </div>
@@ -97,6 +97,31 @@
       </div>
     </div>
   </section>
+  <script>
+    function initializeSyssicEvents() {
+      $('#nav-tab-paga button').on('click', function () {
+        // Rimuove la classe 'active' da tutti i bottoni
+        $('#nav-tab-lug-paga   button').removeClass('active');
+        // Aggiunge la classe 'active' al bottone cliccato
+        $(this).addClass('active');
+        
+        // Ottiene l'ID della sezione da mostrare
+        var target = $(this).attr('aria-controls');
+        
+        // Rimuove le classi 'show active' da tutte le sezioni
+        $('#nav-tabContent-paga   .tab-pane').removeClass('show active');
+        
+        // Aggiunge le classi 'show active' alla sezione target
+        $('#' + target).addClass('show active');
+      });
+    }
+
+    // Inizializza gli eventi quando il documento è pronto
+    $(document).ready(function() {
+      initializeSyssicEvents();
+    });
+  </script>
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

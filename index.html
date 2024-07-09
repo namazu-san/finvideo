@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fin Video Holding</title>
-    
     <link rel="icon" type="image/x-icon" href="img/icona.png">
     <link href="style.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -19,7 +16,6 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand display-4" href="index.html" data-heading="" contenteditable>
-        
         <span class="animation" aria-hidden="true"></span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +38,7 @@
         <source src="img/video2.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <div class="container content bg-image-1"><a href="index.html"> 
+    <div class="container content bg-image-1"><a href="index.html">
         <h1 class="display-4" data-heading="Fin Video Holding" contenteditable>
             Fin Video Holding
             <span class="animation" aria-hidden="true">________________</span>
@@ -137,64 +133,82 @@
         </div>
         <div class="form-group meil">
             <label for="messaggio">Messaggio</label>
-            <textarea class="form-control" id="messaggio" rows="3" placeholder="Inserisci il tuo messaggio"></textarea>
+            <textarea class="form-control" id="messaggio" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Invia</button>
     </form>
 </section>
 
 <!-- Footer -->
-<footer class="footer">
-    <video class="footer_video" autoplay muted loop>
-        <source src="your-video-file.mp4" type="video/mp4">
-    </video>
-    <div class="container footer_inner">
-        <div class="layout">
-            <div class="layout_item">
-                <h5 class="c-nav-tool_title">Servizi</h5>
-                <ul class="c-nav-tool_list">
-                    <li><a class="c-link" href="#syssic">Sistemi di Sicurezza</a></li>
-                    <li><a class="c-link" href="#nebbiogeno">Nebbiogeno</a></li>
-                    <li><a class="c-link" href="#tele">Servizi Telematici</a></li>
-                    <li><a class="c-link" href="#paga">Software Gestionale</a></li>
-                    <li><a class="c-link" href="#paga">Software Professionale</a></li>
-                    <li><a class="c-link" href="#servizi">Banche Dati Telematiche</a></li>
-                    <li><a class="c-link" href="#servizi">Servizi Informatici</a></li>
-                </ul>
-            </div><br>
-            <div class="layout_item">
-                <h5>Contatti</h5>
-                <li>Traversa 160 Via Amendola 14, 70126 Bari - Tel: 080 5484803</li>
-                <li>(800) 090-251</li>
-                <li>info@videoprogram.it</li>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2024 FinVideoHolding. Tutti i diritti riservati.
-        </div>
-    </div>
+<footer class="container text-center">
+    <p>&copy; 2023 Fin Video Holding. All rights reserved.</p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="assets/js/custom.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Funzione per caricare il contenuto HTML
-        function loadContent(id, url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data)
-                .catch(error => console.log(error));
+    $(document).ready(function() {
+        function loadSection(sectionId, filePath, callback) {
+            $(sectionId).load(filePath, function(response, status, xhr) {
+                if (status == "error") {
+                    console.log("Error loading " + filePath + ": " + xhr.status + " " + xhr.statusText);
+                } else if (callback) {
+                    callback();
+                }
+            });
         }
 
-        // Carica i contenuti delle sezioni
-        loadContent("syssic", "syssic.html");
-        loadContent("nebbiogeno", "nebbiogeno.html");
-        loadContent("tele", "tele.html");
-        loadContent("paga", "paga.html");
-        loadContent("game", "game.html");
-        loadContent("lugas", "lugas.html");
+        function initializeCarousel(sectionId) {
+            $(sectionId).find('.carousel').carousel();
+        }
+
+        function initializeSwiper(sectionId) {
+            new Swiper(sectionId + ' .swiper-container', {
+                // swiper options here
+            });
+        }
+
+        function initializeCardClicks(sectionId) {
+            $(sectionId).find('.card').on('click', function() {
+                // card click logic here
+            });
+        }
+
+        loadSection('#syssic', 'syssic.html', function() {
+            initializeCarousel('#syssic');
+            initializeCardClicks('#syssic');
+        });
+
+        loadSection('#nebbiogeno', 'nebbiogeno.html', function() {
+            initializeSwiper('#nebbiogeno');
+            initializeCardClicks('#nebbiogeno');
+        });
+
+        loadSection('#tele', 'tele.html', function() {
+            initializeSwiper('#tele');
+            initializeCardClicks('#tele');
+        });
+
+        loadSection('#paga', 'paga.html', function() {
+            initializeSwiper('#paga');
+            initializeCardClicks('#paga');
+        });
+
+        loadSection('#game', 'game.html', function() {
+            initializeSwiper('#game');
+            initializeCardClicks('#game');
+        });
+
+        loadSection('#lugas', 'lugas.html', function() {
+            initializeSwiper('#lugas');
+            initializeCardClicks('#lugas');
+        });
     });
 </script>
 </body>

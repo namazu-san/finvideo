@@ -74,19 +74,19 @@
             <h2 class="main-title fw-bold">Soluzioni Comode per la Tua Quotidianità</h2>
             <div class="about-five-tab">
               <nav>
-                <div class="nav nav-tabs nav-custom" id="nav-tab" role="tablist">
-                  <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description"
-                    type="button" role="tab" aria-controls="nav-description" aria-selected="true">Descrizione</button>
-                  <button class="nav-link" id="nav-services-tab" data-bs-toggle="tab" data-bs-target="#nav-services"
-                    type="button" role="tab" aria-controls="nav-services" aria-selected="false">Servizi</button>
+                <div class="nav nav-tabs nav-custom" id="nav-tab-tele" role="tablist">
+                  <button class="nav-link active" id="nav-description-tab-tele" data-bs-toggle="tab" data-bs-target="#nav-description"
+                    type="button" role="tab" aria-controls="nav-description-tele" aria-selected="true">Descrizione</button>
+                  <button class="nav-link" id="nav-services-tab-tele" data-bs-toggle="tab" data-bs-target="#nav-services"
+                    type="button" role="tab" aria-controls="nav-services-tele" aria-selected="false">Servizi</button>
                 </div>
               </nav>
-              <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+              <div class="tab-content" id="nav-tabContent-tele">
+                <div class="tab-pane fade show active" id="nav-description-tele" role="tabpanel" aria-labelledby="nav-description-tab-tele">
                   <p>Grazie ad accordi commerciali con diversi partner, abbiamo creato un portale dove i rivenditori possono rivendere una serie di servizi che vanno dalle ricariche telefoniche al pagamento di bollette, dalla prenotazione biglietti alla visure della camera di commercio, e tanti altri servizi, evitando così file e spostamenti vari.</p>
                   <p>Inoltre, grazie ai propri tecnici qualificati, si garantisce ai propri rivenditori l'efficienza e la qualità dei servizi.</p>
                 </div>
-                <div class="tab-pane fade" id="nav-services" role="tabpanel" aria-labelledby="nav-services-tab">
+                <div class="tab-pane fade" id="nav-services-tele" role="tabpanel" aria-labelledby="nav-services-tab-tele">
                   <ul>
                     <li><strong>Ricariche Telefoniche</strong>: Nei nostri punti affiliati si possono ricaricare facilmente i telefoni cellulari di varie compagnie.</li>
                     <li><strong>Pagamento Bollette</strong>: Offri il servizio nel tuo locale e amplia il tuo business con un sistema certificato e sicuro.</li>
@@ -104,6 +104,30 @@
       </div>
     </div>
   </section>
+  <script>
+    function initializeSyssicEvents() {
+      $('#nav-tab-tele button').on('click', function () {
+        // Rimuove la classe 'active' da tutti i bottoni
+        $('#nav-tab-lug-tele  button').removeClass('active');
+        // Aggiunge la classe 'active' al bottone cliccato
+        $(this).addClass('active');
+        
+        // Ottiene l'ID della sezione da mostrare
+        var target = $(this).attr('aria-controls');
+        
+        // Rimuove le classi 'show active' da tutte le sezioni
+        $('#nav-tabContent-tele  .tab-pane').removeClass('show active');
+        
+        // Aggiunge le classi 'show active' alla sezione target
+        $('#' + target).addClass('show active');
+      });
+    }
+
+    // Inizializza gli eventi quando il documento è pronto
+    $(document).ready(function() {
+      initializeSyssicEvents();
+    });
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

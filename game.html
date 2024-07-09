@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servizi Telematici</title>
+  <title>Servizi Gaming</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     .about-area-custom {
@@ -33,7 +33,7 @@
       align-items: center;
       background-color: #82bdf900;
     }
-    .container-servizi{
+    .container-game{
         background-color: #f8fafb;
     }
     #gam{
@@ -56,7 +56,7 @@
 <body>
   <!-- Servizi Telematici Section -->
   <section id="gaming" class="about-area-custom">
-    <div class="container-servizi">
+    <div class="container-game">
       <div id="gioco" class="row custom-align-items-center">
         <div class="col-lg-6 col-12">
           <div class="about-image-custom">
@@ -76,19 +76,19 @@
             <h2 class="main-title fw-bold">Soluzioni Comode per la Tua Quotidianità</h2>
             <div class="about-five-tab">
               <nav>
-                <div class="nav nav-tabs nav-custom" id="nav-tab" role="tablist">
-                  <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description"
-                    type="button" role="tab" aria-controls="nav-description" aria-selected="true">Descrizione</button>
-                  <button class="nav-link" id="nav-services-tab" data-bs-toggle="tab" data-bs-target="#nav-services"
-                    type="button" role="tab" aria-controls="nav-services" aria-selected="false">Servizi</button>
+                <div class="nav nav-tabs nav-custom" id="nav-tab-game" role="tablist">
+                  <button class="nav-link active" id="nav-description-tab-game" data-bs-toggle="tab" data-bs-target="#nav-description"
+                    type="button" role="tab" aria-controls="nav-description-game" aria-selected="true">Descrizione</button>
+                  <button class="nav-link" id="nav-services-tab-game" data-bs-toggle="tab" data-bs-target="#nav-services"
+                    type="button" role="tab" aria-controls="nav-services-game" aria-selected="false">Servizi</button>
                 </div>
               </nav>
-              <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+              <div class="tab-content" id="nav-tabContent-game">
+                <div class="tab-pane fade show active" id="nav-description-game" role="tabpanel" aria-labelledby="nav-description-tab-game">
                   <p>Grazie ad accordi commerciali con diversi partner, abbiamo creato un portale dove i rivenditori possono rivendere una serie di servizi che vanno dalle ricariche telefoniche al pagamento di bollette, dalla prenotazione biglietti alla visure della camera di commercio, e tanti altri servizi, evitando così file e spostamenti vari.</p>
                   <p>Inoltre, grazie ai propri tecnici qualificati, si garantisce ai propri rivenditori l'efficienza e la qualità dei servizi.</p>
                 </div>
-                <div class="tab-pane fade" id="nav-services" role="tabpanel" aria-labelledby="nav-services-tab">
+                <div class="tab-pane fade" id="nav-services-game" role="tabpanel" aria-labelledby="nav-services-tab-game">
                   <ul>
                     <li><strong>Ricariche Telefoniche</strong>: Nei nostri punti affiliati si possono ricaricare facilmente i telefoni cellulari di varie compagnie.</li>
                     <li><strong>Pagamento Bollette</strong>: Offri il servizio nel tuo locale e amplia il tuo business con un sistema certificato e sicuro.</li>
@@ -106,7 +106,30 @@
       </div>
     </div>
   </section>
+  <script>
+    function initializeSyssicEvents() {
+      $('#nav-tab-game button').on('click', function () {
+        // Rimuove la classe 'active' da tutti i bottoni
+        $('#nav-tab-game button').removeClass('active');
+        // Aggiunge la classe 'active' al bottone cliccato
+        $(this).addClass('active');
+        
+        // Ottiene l'ID della sezione da mostrare
+        var target = $(this).attr('aria-controls');
+        
+        // Rimuove le classi 'show active' da tutte le sezioni
+        $('#nav-tabContent-game .tab-pane').removeClass('show active');
+        
+        // Aggiunge le classi 'show active' alla sezione target
+        $('#' + target).addClass('show active');
+      });
+    }
 
+    // Inizializza gli eventi quando il documento è pronto
+    $(document).ready(function() {
+      initializeSyssicEvents();
+    });
+  </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
