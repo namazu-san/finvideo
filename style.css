@@ -531,6 +531,11 @@ h1.display-4 {
     z-index: 1;
     color: white; /* Ensure the text is readable over the video */
 }
+.container-sic,.container-neb,.container-paga,.container-game,.container-servizi{
+    border-radius: 2em;
+
+}
+
 
 
 
