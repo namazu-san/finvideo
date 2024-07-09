@@ -6,6 +6,11 @@ body {
     filter: drop-shadow(0 0 2px rgba(255,255,255, 0.7)) drop-shadow(0 0 2px rgba(41, 131, 172, 0.11)) drop-shadow(0 0 30px rgba(147, 209, 236, 0.06)) drop-shadow(0 0 30px rgba(120, 189, 225, 0.8));
 
 }
+@media (max-width: 991px) {
+    body {
+      font-size: 14px;
+    }
+  }
 
 h1.display-4 {
     font-size: 7.5rem;  
@@ -307,7 +312,7 @@ h1.display-4 {
     position: absolute;
     left: 0;
     background: linear-gradient(
-        15deg,
+        45deg,
         rgba(255, 255, 255, 0) 45%,
         rgba(67, 40, 216, 0.8) 50%,
         rgba(255, 255, 255, 0) 55%,
@@ -315,7 +320,7 @@ h1.display-4 {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 2s infinite;
+    animation: shine 20s infinite;
     background-size: 200%;
     margin-left: 2.5%;
 }
@@ -526,5 +531,7 @@ h1.display-4 {
     z-index: 1;
     color: white; /* Ensure the text is readable over the video */
 }
+
+
 
 
