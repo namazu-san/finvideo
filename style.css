@@ -278,7 +278,7 @@ h1.display-4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(219 210 210 / 0%); /* Cambia il colore e l'opacità come desideri */
+    background-color: rgb(210 212 219 / 47%); /* Cambia il colore e l'opacità come desideri */
     z-index: 1;
     border-radius: 50px;
 }
