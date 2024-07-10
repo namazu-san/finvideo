@@ -534,7 +534,11 @@ h1.display-4 {
 
 .container-sic,.container-neb,.container-paga,.container-game,.container-servizi{
     border-radius: 2em;
+    background-color: #f8fafb73;
 
+}
+.tab-content>.active {
+    background-color: #fbfdfff2;
 }
 
 
