@@ -22,7 +22,7 @@ h1.display-4 {
     font-family: "frozen", serif;
     background-image: url("img/testo1.jpg");
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #221c8385;
+    -webkit-text-fill-color: #221c8317;
     background-size: contain;
     position: relative;
     -webkit-text-stroke: 1px #4f90ab;
@@ -312,8 +312,12 @@ h1.display-4 {
     position: absolute;
     left: 0;
     background: linear-gradient(
-        linear-gradient(11deg, rgba(255, 255, 255, 0) 45%, rgb(18 18 34 / 80%) 50%, rgba(255, 255, 255, 0) 55%, rgb(30 27 56 / 67%) 100%)
-    ;
+        11deg,
+        rgba(255, 255, 255, 0) 45%,
+        rgba(67, 40, 216, 0.8) 50%,
+        rgba(255, 255, 255, 0) 55%,
+        rgba(24, 22, 155, 0.678) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 1.2s infinite;
