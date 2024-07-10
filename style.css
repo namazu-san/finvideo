@@ -313,7 +313,7 @@ h1.display-4 {
     left: 0;
     background: linear-gradient(
         linear-gradient(11deg, rgba(255, 255, 255, 0) 45%, rgb(18 18 34 / 80%) 50%, rgba(255, 255, 255, 0) 55%, rgb(30 27 56 / 67%) 100%)
-    );
+    ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 1.2s infinite;
