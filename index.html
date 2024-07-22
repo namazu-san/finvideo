@@ -33,19 +33,9 @@
 </nav><br>
 
 <!-- Home Section -->
-<section id="home" class="jumbotron text-center container bg-video home">
-    <video autoplay muted loop id="bg-video">
-        <source src="img/prova1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="container content bg-image-1"><a href="index.html">
-        <h1 class="display-4" data-heading="Fin Video Holding" contenteditable>
-            Fin Video Holding
-            <span class="animation" aria-hidden="true">________________</span>
-        </h1></a><br>
-        <a class="btn btn-primary btn-lg" href="#servizi" role="button">Scopri di più</a>
-    </div>
-</section>
+<section id="home" class="jumbotron text-center container bg-video home"></section>
+
+
 
 <!-- I Nostri Servizi Section -->
 <section id="servizi" class="container">
@@ -206,6 +196,8 @@
                 // card click logic here
             });
         }
+
+        loadSection('#home', 'demo.html');
 
         loadSection('#syssic', 'syssic.html', function() {
             initializeCarousel('#syssic');

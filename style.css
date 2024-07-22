@@ -1,4 +1,5 @@
 body {
+    background-image: url("img/demo.jpg");
     background-color: #f0f0f0;
     color: #343a40;
     margin: 10px;
@@ -68,6 +69,11 @@ h1.display-4 {
 
 .navbar {
     margin-bottom: 20px;
+    background-color: #f8f9fa; /* Colore di sfondo della navbar */
+    position: fixed; /* Fissa la navbar */
+    top: 0; /* Posizionata in cima */
+    width: 100%; /* Larghezza completa */
+    z-index: 1000; 
 }
 #home{
     background-color: #82bdf900;
@@ -540,5 +546,9 @@ h1.display-4 {
 .tab-content>.active {
     background-color: #f8fafb96;
 }
+#home-titolo  {
 
+    color: #fff;
+
+}
 

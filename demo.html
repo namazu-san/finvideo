@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizi Telematici</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('img/testa3.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    #icona {
+      width: 45%;
+      margin-left: 8.5em;
+
+    }
+    .about-area-custom {
+      display: flex;
+      height: 100%;
+    }
+    .left-section {
+      position: relative;
+      width: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .left-section video {
+      width: 85%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+      border: 5px solid rgba(223, 191, 17, 0.52); /* Bordo bianco attorno al video */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra attorno al video */
+    }
+    .left-section video:hover {
+      transform: scale(1.1);
+    }
+    .right-section {
+      border: 13px solid rgba(53, 71, 170, 0.74);
+      box-shadow: 10px 10px 0 3px rgba(247, 237, 237, 0.33);
+      border-radius: 5%;
+      display: grid;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40em;
+      background-color: rgba(204, 222, 232, 0.11); /* Colore di sfondo con opacità */
+      text-align: center;
+      padding: 4em;
+      color: white;
+      height: 40em;
+      margin-top: 5em;
+    }
+    .right-section h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      font-family: 'Chalkduster', cursive;
+      transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+    }
+    .right-section h1:hover {
+      transform: scale(1.02);
+      text-shadow: 0 0 5px rgba(173, 216, 230, 0.8); /* Colore celeste leggerissimo */
+    }
+  </style>
+</head>
+<body>
+  <!-- Servizi Telematici Section -->
+  <section class="about-area-custom">
+    <div class="left-section">
+      <video autoplay muted loop>
+        <source src="img/testa.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="right-section">
+      <img id="icona" src="img/icon1.jpg" alt="Icona">
+      <h1 id="home-titolo">Creatori di Valore</h1>
+      <h1 id="home-titolo">Fin Video Holding</h1>
+      <h1 id="home-titolo">Accendo il tuo Business</h1>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
