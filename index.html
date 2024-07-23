@@ -130,37 +130,9 @@
     </form>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <video class="footer_video" autoplay muted loop>
-        <source src="your-video-file.mp4" type="video/mp4">
-    </video>
-    <div class="container footer_inner">
-        <div class="layout">
-            <div class="layout_item">
-                <h5 class="c-nav-tool_title">Servizi</h5>
-                <ul class="c-nav-tool_list">
-                    <li><a class="c-link" href="#syssic">Sistemi di Sicurezza</a></li>
-                    <li><a class="c-link" href="#nebbiogeno">Nebbiogeno</a></li>
-                    <li><a class="c-link" href="#tele">Servizi Telematici</a></li>
-                    <li><a class="c-link" href="#paga">Software Gestionale</a></li>
-                    <li><a class="c-link" href="#paga">Software Professionale</a></li>
-                    <li><a class="c-link" href="#servizi">Banche Dati Telematiche</a></li>
-                    <li><a class="c-link" href="#servizi">Servizi Informatici</a></li>
-                </ul>
-            </div><br>
-            <div class="layout_item">
-                <h5>Contatti</h5>
-                <li>Traversa 160 Via Amendola 14, 70126 Bari - Tel: 080 5484803</li>
-                <li>(800) 090-251</li>
-                <li>info@videoprogram.it</li>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2024 FinVideoHolding. Tutti i diritti riservati.
-        </div>
-    </div>
-</footer>
+<!-- Home Section -->
+<section id="footer"></section>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
@@ -199,6 +171,7 @@
         }
 
         loadSection('#home', 'demo.html');
+        loadSection('#footer', 'footer.html');
 
         loadSection('#syssic', 'syssic.html', function() {
             initializeCarousel('#syssic');

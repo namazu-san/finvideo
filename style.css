@@ -192,33 +192,10 @@ h1.display-4 {
     color: #ffffff;/* Sostituisci con il percorso dell'immagine */
 }
 
-.footer {
-    background-color: #71b5ff99;
-    color: white;
-    padding: 2em;
-    position: relative;
-    overflow: hidden;
-}
 
-.footer_video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.6;
-    z-index: -1;
-}
 
-.footer_inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.c-footer {
-    width: 100%;
-}
+
 
 .layout {
     display: flex;
@@ -260,11 +237,7 @@ h1.display-4 {
     color: #f0f0f0;
 }
 
-.copyright {
-    margin-top: 20%;
-    font-size: 14px;
-    text-align: center;
-}
+
 
 .form-group label {
     font-weight: bold;
@@ -322,19 +295,7 @@ h1.display-4 {
 }
 
 
-.navbar-brand.display-4 {
-    transform: translate(0, -40%);
-    font-size: calc(2vw + 0.5rem); /* Ridotto il font-size per la navbar */
-    font-family: "frozen", serif;
-    background-image: url("https://assets.codepen.io/209981/ice.jpg");
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #3923d9;
-    background-size: contain;
-    position: relative;
-    -webkit-text-stroke: 1px #4f90ab;
-    margin-top: 4%;
-    filter: drop-shadow(0 0 2px rgba(255,255,255, 0.7)) drop-shadow(0 0 2px rgba(17, 65, 87, 0.7)) drop-shadow(0 0 30px rgba(141, 198, 223, 0.8)) drop-shadow(0 0 30px rgba(21, 62, 83, 0.8));
-}
+
 
 .animation {
     position: absolute;
@@ -377,15 +338,7 @@ h1.display-4 {
 }
 
 
-.footer_video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.6;
-    z-index: -1;
-}
+
 #bg-video {
     position: absolute;
     top: 0;
@@ -581,5 +534,6 @@ h1.display-4 {
     margin-top: -0.4em
 
 }
+
 
 
