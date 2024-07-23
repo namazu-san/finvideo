@@ -97,6 +97,7 @@ h1.display-4 {
     background-color: rgba(230, 233, 249, 0.92);
     border-radius: 300em;
     padding: 0.1em;
+    cursor: context-menu;
 }
 
 .card-deck .card {
@@ -541,6 +542,7 @@ h1.display-4 {
 .container-sic,.container-neb,.container-paga,.container-game,.container-servizi{
     border-radius: 2em;
     background-color: #f8fafb73;
+    cursor: context-menu;
 
 }
 .tab-content>.active {
