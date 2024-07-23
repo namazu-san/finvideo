@@ -7,82 +7,77 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
-      margin: 0;
+      margin-top: 3em;
       height: 100vh;
       background: url('img/testa3.png') no-repeat center center fixed;
       background-size: cover;
-    }
-    #icona {
-      width: 100%;
-      margin-left: 0.5em;
-
-    }
-    .about-area-custom {
       display: flex;
-      height: 100%;
-    }
-    .left-section {
-      position: relative;
-      width: 120%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .left-section video {
-      width: 100%;
-      height: auto;
-      transition: transform 0.3s ease-in-out;
-      border: 5px solid rgba(223, 191, 17, 0.52); /* Bordo bianco attorno al video */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra attorno al video */
-      padding: 1em;
-    }
-    .left-section video:hover {
-      transform: scale(1.1);
-    }
-    .right-section {
-      border: 13px solid rgba(53, 71, 170, 0.74);
-      box-shadow: 10px 10px 0 3px rgba(247, 237, 237, 0.33);
-      border-radius: 5%;
-      display: grid;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      width: 18em;
-      background-color: rgba(204, 222, 232, 0.11); /* Colore di sfondo con opacità */
       text-align: center;
-      padding: 5em;
       color: white;
-      height: 28em;
-      margin-left: 2em;
     }
-    .right-section h1 {
-      font-size: 1.8em;
-      margin-bottom: 0.5em;
+    .up-section h1,
+    .up-section h2,
+    .down-section h2 {
       font-family: 'Chalkduster', cursive;
       transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+      color: white;
     }
-    .right-section h1:hover {
+    .up-section h1:hover,
+    .up-section h2:hover,
+    .down-section h2:hover {
       transform: scale(1.02);
-      text-shadow: 0 0 5px rgba(173, 216, 230, 0.8); /* Colore celeste leggerissimo */
+      text-shadow: 0 0 5px rgba(173, 216, 230, 0.8);
+      
+    }
+    .center-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 1em;
+    }
+    .center-section video {
+      width: 75%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+      border: 5px solid rgba(223, 191, 17, 0.52);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 1em;
+    }
+    .center-section video:hover {
+      transform: scale(1.1);
+    }
+    .up-section h1{
+      font-size: 6.5rem;
+      margin-top: 0.5em;
+      color: white;
+      
     }
   </style>
 </head>
 <body>
-  <!-- Servizi Telematici Section -->
-  <section class="about-area-custom">
-    <div class="left-section">
-      <video autoplay muted loop>
-        <source src="img/testa.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="right-section">
-      <h1 id="home-titolo">Creatori di Valore</h1>
-      <h1 id="home-titolo2">Fin Video Holding</h1>
-      <h1 id="home-titolo">Accendo il tuo Business</h1>
-    </div>
-  </section>
+  <!-- Sezione Superiore -->
+  <div class="up-section">
+    <strong><h1 id="home-titolo">Fin Video Holding</h1>
+    <h2 id="home-titolo">Creatori di Valore</h2></strong>
+  </div><br>
+
+  <!-- Sezione Centrale -->
+  <div class="center-section">
+    <video autoplay muted loop>
+      <source src="img/testa.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div><br>
+
+  <!-- Sezione Inferiore -->
+  <div class="down-section">
+    
+    <h2 id="home-titolo">Accendi il tuo Business</h2>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

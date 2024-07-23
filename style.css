@@ -7,6 +7,28 @@ body {
     filter: drop-shadow(0 0 2px rgba(255,255,255, 0.7)) drop-shadow(0 0 2px rgba(41, 131, 172, 0.11)) drop-shadow(0 0 30px rgba(147, 209, 236, 0.06)) drop-shadow(0 0 30px rgba(120, 189, 225, 0.8));
 
 }
+/* Specifica la navbar */
+nav.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030; /* Assicurati che la navbar sia al di sopra di altri elementi */
+    background-color: #f8f9fa; /* Colore di sfondo della navbar */
+}
+
+/* Migliora l'ombreggiatura della navbar per un effetto visivo */
+.navbar {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Migliora la visualizzazione su dispositivi mobili */
+@media (max-width: 767px) {
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0.75rem; /* Riduzione della spaziatura sui dispositivi mobili */
+    }
+}
+
 @media (max-width: 991px) {
     body {
       font-size: 14px;
@@ -97,7 +119,6 @@ h1.display-4 {
     background-color: rgba(230, 233, 249, 0.92);
     border-radius: 300em;
     padding: 0.1em;
-    cursor: context-menu;
 }
 
 .card-deck .card {
@@ -542,25 +563,23 @@ h1.display-4 {
 .container-sic,.container-neb,.container-paga,.container-game,.container-servizi{
     border-radius: 2em;
     background-color: #f8fafb73;
-    cursor: context-menu;
 
 }
 .tab-content>.active {
     background-color: #f8fafb96;
 }
-#home-titolo  {
-
+.h1#home-titolo  {
+    
     color: #fff;
-    margin-top: -0.4em;
-    cursor: grab;
+    margin-top: -0.4em
 
 }
 #home-titolo2  {
 
-    color: #ecdea991;
-    margin-top: -0.4em;
-    cursor: grab;
-    text-shadow: 0px 0px 1px rgba(234, 224, 147, 0.7);
+    
+    color: #fff;
+    margin-top: -0.4em
 
 }
+
 
