@@ -520,6 +520,9 @@ h1.display-4 {
 }
 .tab-content>.active {
     background-color: #f8fafb96;
+    border-radius: 0.7rem;
+    padding: 0.5em;
+    margin-top: 0.5em;
 }
 .h1#home-titolo  {
     
