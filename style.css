@@ -7,28 +7,6 @@ body {
     filter: drop-shadow(0 0 2px rgba(255,255,255, 0.7)) drop-shadow(0 0 2px rgba(41, 131, 172, 0.11)) drop-shadow(0 0 30px rgba(147, 209, 236, 0.06)) drop-shadow(0 0 30px rgba(120, 189, 225, 0.8));
 
 }
-/* Specifica la navbar */
-nav.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030; /* Assicurati che la navbar sia al di sopra di altri elementi */
-    background-color: #f8f9fa; /* Colore di sfondo della navbar */
-}
-
-/* Migliora l'ombreggiatura della navbar per un effetto visivo */
-.navbar {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-/* Migliora la visualizzazione su dispositivi mobili */
-@media (max-width: 767px) {
-    .navbar-nav .nav-link {
-        padding: 0.5rem 0.75rem; /* Riduzione della spaziatura sui dispositivi mobili */
-    }
-}
-
 @media (max-width: 991px) {
     body {
       font-size: 14px;
@@ -89,14 +67,7 @@ h1.display-4 {
     src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Ice%20kingdom%20-%20Bold%20-%20Por%20Kustren.woff");
 }
 
-.navbar {
-    margin-bottom: 20px;
-    background-color: #f8f9fa; /* Colore di sfondo della navbar */
-    position: fixed; /* Fissa la navbar */
-    top: 0; /* Posizionata in cima */
-    width: 100%; /* Larghezza completa */
-    z-index: 1000; 
-}
+
 #home{
     background-color: #82bdf900;
 
@@ -191,12 +162,6 @@ h1.display-4 {
     background-image: url('img/sertele.png');
     color: #ffffff;/* Sostituisci con il percorso dell'immagine */
 }
-
-
-
-
-
-
 .layout {
     display: flex;
 }
@@ -205,27 +170,7 @@ h1.display-4 {
     padding: 0 10px;
 }
 
-.c-nav-tool {
-    border-left: 1px solid #fff;
-    padding-left: 10px;
-}
 
-.c-nav-tool_title {
-    margin-bottom: 10px;
-}
-
-.c-nav-tool_list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.c-nav-tool_list li {
-    margin-bottom: 10px;
-}
-
-.c-nav-tool_list li:last-child {
-    margin-bottom: 0;
-}
 
 .c-link {
     color: #fff;
@@ -358,9 +303,6 @@ h1.display-4 {
 .meil{
     background-color: rgba(230, 233, 249, 0.92);
     border-radius: 5px; 
-}
-.navbar-collapse {
-    margin-right: 27em;
 }
 
 

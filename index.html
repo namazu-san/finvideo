@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fin Video Holding</title>
-    <link rel="icon" type="image/x-icon" href="img/icona.png">
+    <link rel="icon" type="image/x-icon" href="img/icon1.jpg">
     <link href="style.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -14,24 +14,8 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand display-4" href="index.html" data-heading="" contenteditable>
-        <span class="animation" aria-hidden="true"></span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#chi-siamo">Chi Siamo</a></li>
-            <li class="nav-item"><a class="nav-link" href="#cosa-facciamo">Cosa Facciamo</a></li>
-            <li class="nav-item"><a class="nav-link" href="#servizi">I Nostri Servizi</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
-        </ul>
-    </div>
-</nav><br>
+<!-- Footer Section -->
+<section id="navbar"></section>
 
 <!-- Home Section -->
 <section id="home" class="jumbotron text-center container bg-video home"></section>
@@ -83,14 +67,6 @@
     </div>
 </section><br><br>
 
-<!-- Sezioni Dinamiche -->
-<section id="syssic"></section><br>
-<section id="nebbiogeno"></section><br>
-<section id="tele"></section><br>
-<section id="paga"></section><br>
-<section id="game"></section><br>
-<section id="lugas"></section><br>
-
 <!-- Chi Siamo Section -->
 <section id="chi-siamo" class="container">
     <h2 class="section-title">Chi Siamo</h2>
@@ -130,7 +106,17 @@
     </form>
 </section>
 
-<!-- Home Section -->
+<!-- Sezioni Dinamiche -->
+<section id="syssic"></section><br>
+<section id="nebbiogeno"></section><br>
+<section id="tele"></section><br>
+<section id="paga"></section><br>
+<section id="game"></section><br>
+<section id="lugas"></section><br>
+
+
+
+<!-- Footer Section -->
 <section id="footer"></section>
 
 
@@ -170,6 +156,9 @@
             });
         }
 
+
+
+        loadSection('#navbar', 'navbar.html');
         loadSection('#home', 'demo.html');
         loadSection('#footer', 'footer.html');
 
