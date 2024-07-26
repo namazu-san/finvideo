@@ -154,7 +154,7 @@ h1.display-4 {
 }
 
 .card-deck:nth-child(2) .card:nth-child(2)::before {
-    background-image: url('img/nebbi.png');
+    background-image: url('img/sped.jpg');
     color: #ffffff;/* Sostituisci con il percorso dell'immagine */
 }
 
