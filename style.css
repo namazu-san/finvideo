@@ -82,12 +82,12 @@ h1.display-4 {
 }
 
 .section-title {
-    color: #0c4077;
+    color: #ffffff;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     font-size: 2em;
-    background-color: rgba(230, 233, 249, 0.92);
+    background: linear-gradient(to right, #63a5c6d4, #5ed1d7, #6390aa , #6577bf, #7a6ce3, #b9d048);
     border-radius: 300em;
     padding: 0.1em;
 }
@@ -470,7 +470,8 @@ h1.display-4 {
 .h1#home-titolo  {
     
     color: #fff;
-    margin-top: -0.4em
+    margin-top: -0.4em;
+    
 
 }
 #home-titolo2  {
@@ -484,28 +485,111 @@ h1.display-4 {
     margin-top: 2.4em
 
 }
-
-.paragrafo-chisiamo {
-    position: relative;
-    width: 100%;
-    padding: 20px; /* Adjust padding as needed */
-    color: black; /* Optional: Adjust text color for better readability */
-    background: rgba(255, 255, 255, 0.71); /* Optional: Semi-transparent background for text readability */
+/* Assicurati che il CSS del footer sia specifico e unico */
+#custom-footer {
+    background-color: #000000;
+    color: #ecf0f1;
+    padding: 2em 0;
+    font-family: Arial, sans-serif;
 }
 
-.paragrafo-chisiamo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('img/chisiamo.jpg');
-    background-size: contain;
-    opacity: 9.5; /* Adjust the transparency (0.0 to 1.0) */
-    z-index: -1;
-    filter: blur(2px); /* Apply blur to the background image */
+#custom-footer .container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-#chi-siamo {
-    width: 85%;
+
+#custom-footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#custom-footer .col-md-4 {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+#custom-footer h2, #custom-footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #afd99cd4, #c4bb78, #678c5a , #c6b15e, #f6e223, #e8852e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#custom-footer p {
+    color: #bdc3c7;
+    margin-bottom: 5px;
+}
+
+#custom-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+#custom-footer ul li {
+    margin-bottom: 5px;
+}
+
+#custom-footer .social li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#custom-footer .social a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#custom-footer .social a:hover {
+    color: #3498db;
+}
+
+#custom-footer .contact a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#custom-footer .contact a:hover {
+    color: #3498db;
+}
+
+#custom-footer .contact i {
+    margin-right: 5px;
+}
+
+#custom-footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #34495e;
+    padding-top: 10px;
+    font-size: 14px;
+    background: linear-gradient(to right, #afd99cd4, #c4bb78, #678c5a , #c6b15e, #f6e223, #e8852e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#custom-footer .back-to-top {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#custom-footer .back-to-top:hover {
+    color: #3498db;
+}
+
+#custom-footer .back-to-top i {
+    margin-right: 5px;
+}
+
+#custom-footer #info {
+    color: white;
 }

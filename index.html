@@ -8,7 +8,6 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
@@ -22,11 +21,9 @@
 
 
 <!-- Chi Siamo Section -->
-<section id="chi-siamo" class="container-chisiamo">
+<section id="chi-siamo" class="container">
     <strong><h2 class="section-title">Chi Siamo</h2>
-    <p class="paragrafo-chisiamo">
-        La FinVideoHolding, con esperienza trentennale nel settore servizi, opera su territorio nazionale al fine di poter offrire soluzioni informatiche e telematiche che rispondono alle esigenze di mercato e accrescono il business dei propri affiliati. Sempre pronti a soddisfare le richieste dei nostri clienti e a creare valore aggiunto alla loro realtà commerciale.
-    </p></strong>
+    <p class="paragrafo">La FinVideoHolding, con esperienza trentennale nel settore servizi, opera su territorio nazionale al fine di poter offrire soluzioni informatiche e telematiche che rispondono alle esigenze di mercato e accrescono il business dei propri affiliati. Sempre pronti a soddisfare le richieste dei nostri clienti e a creare valore aggiunto alla loro realtà commerciale.</p></strong>
 </section>
 
 
@@ -84,8 +81,21 @@
 </section><br><br>
 
 
+
+
+<!-- Sezioni Dinamiche -->
+<section id="syssic"></section><br>
+<section id="nebbiogeno"></section><br>
+<section id="tele"></section><br>
+<section id="paga"></section><br>
+<section id="game"></section><br>
+<section id="lugas"></section><br>
+
+
+
 <!-- Contatti Section -->
 <section id="contatti" class="container">
+    <h2 class="section-title">Contattaci</h2>
     <form>
         <div class="form-group meil">
             <label for="nome">Nome</label>
@@ -111,14 +121,6 @@
     </form>
 </section>
 
-<!-- Sezioni Dinamiche -->
-<section id="syssic"></section><br>
-<section id="nebbiogeno"></section><br>
-<section id="tele"></section><br>
-<section id="paga"></section><br>
-<section id="game"></section><br>
-<section id="lugas"></section><br>
-
 
 
 <!-- Footer Section -->
@@ -127,7 +129,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="assets/js/isotope.min.js"></script>
 <script src="assets/js/owl-carousel.js"></script>
@@ -165,7 +166,7 @@
 
         loadSection('#navbar', 'navbar.html');
         loadSection('#home', 'demo.html');
-        loadSection('#footer', 'footer.html');
+        loadSection('#footer', 'footer1.html');
 
         loadSection('#syssic', 'syssic.html', function() {
             initializeCarousel('#syssic');
