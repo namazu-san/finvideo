@@ -134,12 +134,12 @@ h1.display-4 {
 }
 
 .card:nth-child(1)::before {
-    background-image: url('img/money.png');
+    background-image: url('img/gaming.png');
     color: #ffffff;/* Sostituisci con il percorso dell'immagine */
 }
 
 .card:nth-child(2)::before {
-    background-image: url('img/gaming.png');
+    background-image: url('img/sicu.png');
     color: #ffffff;/* Sostituisci con il percorso dell'immagine */
 }
 
@@ -149,7 +149,7 @@ h1.display-4 {
 }
 
 .card-deck:nth-child(2) .card:nth-child(1)::before {
-    background-image: url('img/sicu.png');
+    background-image: url('img/money.png');
     color: #ffffff;/* Sostituisci con il percorso dell'immagine */
 }
 
