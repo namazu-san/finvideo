@@ -456,7 +456,7 @@ h1.display-4 {
     color: white; /* Ensure the text is readable over the video */
 }
 
-.container-sic,.container-neb,.container-paga,.container-game,.container-servizi{
+.container-sic,.container-neb,.container-paga,.container-game,.container-servizi,.container-lugas{
     border-radius: 2em;
     background-color: #f8fafb73;
 
@@ -472,7 +472,6 @@ h1.display-4 {
     color: #fff;
     margin-top: -0.4em;
     
-
 }
 #home-titolo2  {
 
