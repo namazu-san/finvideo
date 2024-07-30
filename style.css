@@ -457,7 +457,7 @@ h1.display-4 {
 }
 
 .container-sic,.container-neb,.container-paga,.container-game,.container-servizi,.container-lugas{
-    border-radius: 2em;
+    border-radius: 1em;
     background-color: #f8fafb73;
 
 }
