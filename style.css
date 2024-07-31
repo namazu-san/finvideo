@@ -107,9 +107,7 @@ h1.display-4 {
     background-position: center;
 }
 
-.card-title,
-.card-text {
-    color: #091542; /* Colore del testo bianco */
+.card-title {
     font-size: 18px !important;
 }
 
