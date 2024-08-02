@@ -207,7 +207,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    require 'phpmailer/vendor/autoload.php';  // Assicurati che il percorso sia corretto
+    require 'vendor/autoload.php';  // Assicurati che il percorso sia corretto
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Recupera i dati del form
@@ -220,18 +220,18 @@
         // Configura PHPMailer
         $mail = new PHPMailer(true);
         try {
-            // Configurazione server SMTP
+            // Configurazione server SMTP di Aruba
             $mail->isSMTP();
-            $mail->Host = 'smtps.aruba.it';  // Specifica il server SMTP principale e di backup
+            $mail->Host = 'smtps.aruba.it';
             $mail->SMTPAuth = true;
-            $mail->Username = 'info@finvideoholding.it';  // Sostituisci con la tua email SMTP
-            $mail->Password = 'ABC123def?';  // Sostituisci con la tua password SMTP
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Username = 'info@finvideoholding.it';  // Sostituisci con la tua email Aruba
+            $mail->Password = 'ABC123def?';  // Sostituisci con la tua password Aruba
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // Utilizza SMTPS per la crittografia
             $mail->Port = 465;
 
             // Destinatario
-            $mail->setFrom('info@finvideoholding.it', 'Segreteria');
-            $mail->addAddress('info@finvideoholding.it');  // Aggiungi un destinatario (la tua email)
+            $mail->setFrom('info@finvideoholding.it', 'Segreteria');  // Sostituisci con il tuo indirizzo e nome
+            $mail->addAddress('info@finvideoholding.it');  // Aggiungi il tuo indirizzo email come destinatario
 
             // Contenuto
             $mail->isHTML(true);
@@ -253,7 +253,7 @@
             ";
 
             $mail->send();
-            echo "<p>Email inviata con successo a $email_destinatario.</p>";
+            echo "<p>Email inviata con successo a info@finvideoholding.it.</p>";
         } catch (Exception $e) {
             echo "<p>Errore nell'invio dell'email: {$mail->ErrorInfo}</p>";
         }
