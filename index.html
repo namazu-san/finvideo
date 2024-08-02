@@ -203,37 +203,36 @@
         });
     });
 </script>
-<?php
+ <?php
+    // Includi i file di PHPMailer
+    require 'phpmailer/src/Exception.php';
+    require 'phpmailer/src/PHPMailer.php';
+    require 'phpmailer/src/SMTP.php';
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    require 'phpmailer/vendor/autoload.php';  // Assicurati che il percorso sia corretto
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Recupera i dati del form
         $nome = htmlspecialchars($_POST['nome']);
         $cognome = htmlspecialchars($_POST['cognome']);
         $email = htmlspecialchars($_POST['email']);
         $telefono = htmlspecialchars($_POST['telefono']);
         $messaggio = htmlspecialchars($_POST['messaggio']);
 
-        // Configura PHPMailer
         $mail = new PHPMailer(true);
+
         try {
-            // Configurazione server SMTP di Aruba
             $mail->isSMTP();
             $mail->Host = 'smtps.aruba.it';
             $mail->SMTPAuth = true;
-            $mail->Username = 'info@finvideoholding.it';  // Sostituisci con la tua email Aruba
-            $mail->Password = 'ABC123def?';  // Sostituisci con la tua password Aruba
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // Utilizza SMTPS per la crittografia
+            $mail->Username = 'info@finvideoholding.it';  // Sostituisci con la tua email
+            $mail->Password = 'ABC123def?';  // Sostituisci con la tua password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
-            // Destinatario
             $mail->setFrom('info@finvideoholding.it', 'Segreteria');  // Sostituisci con il tuo indirizzo e nome
-            $mail->addAddress('info@finvideoholding.it');  // Aggiungi il tuo indirizzo email come destinatario
+            $mail->addAddress('info@finvideoholding.it');  // La tua email dove ricevere i messaggi
 
-            // Contenuto
             $mail->isHTML(true);
             $mail->Subject = 'Nuovo messaggio dal modulo di contatto';
             $mail->Body = "
