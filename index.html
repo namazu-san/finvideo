@@ -204,6 +204,11 @@
     });
 </script>
 <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'vendor/autoload.php';  // Assicurati che il percorso sia corretto
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Recupera i dati del form
         $nome = htmlspecialchars($_POST['nome']);
@@ -212,38 +217,45 @@
         $telefono = htmlspecialchars($_POST['telefono']);
         $messaggio = htmlspecialchars($_POST['messaggio']);
 
-        // Imposta l'indirizzo email destinatario
-        $email_destinatario = "info@finvideoholding.it";  // Sostituisci con il tuo indirizzo email
+        // Configura PHPMailer
+        $mail = new PHPMailer(true);
+        try {
+            // Configurazione server SMTP
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';  // Specifica il server SMTP principale e di backup
+            $mail->SMTPAuth = true;
+            $mail->Username = 'tuaemail@gmail.com';  // Sostituisci con la tua email SMTP
+            $mail->Password = 'tuapassword';  // Sostituisci con la tua password SMTP
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
 
-        // Imposta gli header dell'email
-        $headers = "From: $email\r\n";
-        $headers .= "Reply-To: $email\r\n";
-        $headers .= "MIME-Version: 1.0\r\n";
-        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+            // Destinatario
+            $mail->setFrom('tuaemail@gmail.com', 'Tuo Nome');
+            $mail->addAddress('tuoindirizzo@example.com');  // Aggiungi un destinatario (la tua email)
 
-        // Imposta il contenuto dell'email
-        $subject = "Nuovo messaggio dal modulo di contatto";
-        $body = "
-        <html>
-        <head>
-            <title>Nuovo messaggio dal modulo di contatto</title>
-        </head>
-        <body>
-            <p>Nome: $nome</p>
-            <p>Cognome o Ragione Sociale: $cognome</p>
-            <p>Email: $email</p>
-            <p>Telefono: $telefono</p>
-            <p>Messaggio:</p>
-            <p>$messaggio</p>
-        </body>
-        </html>
-        ";
+            // Contenuto
+            $mail->isHTML(true);
+            $mail->Subject = 'Nuovo messaggio dal modulo di contatto';
+            $mail->Body = "
+            <html>
+            <head>
+                <title>Nuovo messaggio dal modulo di contatto</title>
+            </head>
+            <body>
+                <p>Nome: $nome</p>
+                <p>Cognome o Ragione Sociale: $cognome</p>
+                <p>Email: $email</p>
+                <p>Telefono: $telefono</p>
+                <p>Messaggio:</p>
+                <p>$messaggio</p>
+            </body>
+            </html>
+            ";
 
-        // Invia l'email
-        if (mail($email_destinatario, $subject, $body, $headers)) {
+            $mail->send();
             echo "<p>Email inviata con successo a $email_destinatario.</p>";
-        } else {
-            echo "<p>Errore nell'invio dell'email a $email_destinatario.</p>";
+        } catch (Exception $e) {
+            echo "<p>Errore nell'invio dell'email: {$mail->ErrorInfo}</p>";
         }
     }
     ?>
