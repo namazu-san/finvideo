@@ -95,31 +95,31 @@
 
 <!-- Contatti Section -->
 <section id="contatti" class="container">
-    <h2 class="section-title">Contattaci</h2>
-    <form method="post" action="">
-        <div class="form-group meil">
-            <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
-        </div>
-        <div class="form-group meil">
-            <label for="cognome">Cognome o Ragione Sociale</label>
-            <input type="text" class="form-control" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome o ragione sociale" required>
-        </div>
-        <div class="form-group meil">
-            <label for="email">Indirizzo e-mail</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua e-mail" required>
-        </div>
-        <div class="form-group meil">
-            <label for="telefono">Telefono</label>
-            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Inserisci il tuo numero di telefono" required>
-        </div>
-        <div class="form-group meil">
-            <label for="messaggio">Messaggio</label>
-            <textarea class="form-control" id="messaggio" name="messaggio" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Invia</button>
-    </form>
-</section>
+        <h2 class="section-title">Contattaci</h2>
+        <form method="post" action="invio_email.php">
+            <div class="form-group meil">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+            </div>
+            <div class="form-group meil">
+                <label for="cognome">Cognome o Ragione Sociale</label>
+                <input type="text" class="form-control" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome o ragione sociale" required>
+            </div>
+            <div class="form-group meil">
+                <label for="email">Indirizzo e-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua e-mail" required>
+            </div>
+            <div class="form-group meil">
+                <label for="telefono">Telefono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Inserisci il tuo numero di telefono" required>
+            </div>
+            <div class="form-group meil">
+                <label for="messaggio">Messaggio</label>
+                <textarea class="form-control" id="messaggio" name="messaggio" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Invia</button>
+        </form>
+    </section>
 
 
 <!-- Footer Section -->
@@ -228,12 +228,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Invia l'email
     if (mail($to, $subject, $body, $headers)) {
-        echo "<p>Email inviata con successo.</p>";
+        echo '<p>Email inviata con successo. Verrai reindirizzato alla pagina principale.</p>';
+        echo '<script>setTimeout(function() { window.location.href = "/"; }, 2000);</script>'; // Cambia '/' con il percorso della tua pagina principale
     } else {
         echo "<p>Errore nell'invio dell'email.</p>";
     }
 }
 ?>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault(); // Prevenire l'invio del modulo tramite POST
+    var form = document.getElementById('contactForm');
+
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = '/'; // Cambia '/' con il percorso della tua pagina principale
+        } else {
+            alert('Errore nell\'invio del modulo.');
+        }
+    })
+    .catch(error => {
+        console.error('Errore:', error);
+        alert('Errore nell\'invio del modulo.');
+    });
+}
+</script>
 
 
 </body>
