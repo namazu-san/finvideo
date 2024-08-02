@@ -224,14 +224,14 @@
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';  // Specifica il server SMTP principale e di backup
             $mail->SMTPAuth = true;
-            $mail->Username = 'tuaemail@gmail.com';  // Sostituisci con la tua email SMTP
-            $mail->Password = 'tuapassword';  // Sostituisci con la tua password SMTP
+            $mail->Username = 'info@finvideoholding.it';  // Sostituisci con la tua email SMTP
+            $mail->Password = 'ABC123def?';  // Sostituisci con la tua password SMTP
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
             // Destinatario
-            $mail->setFrom('tuaemail@gmail.com', 'Tuo Nome');
-            $mail->addAddress('tuoindirizzo@example.com');  // Aggiungi un destinatario (la tua email)
+            $mail->setFrom('Segreteria', 'Tuo Nome');
+            $mail->addAddress('info@finvideoholding.it');  // Aggiungi un destinatario (la tua email)
 
             // Contenuto
             $mail->isHTML(true);
