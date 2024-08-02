@@ -223,12 +223,11 @@
 
         try {
             $mail->isSMTP();
-            $mail->Host = 'smtps.aruba.it';
+            $mail->Host = 'smtp.nomedominio.estensione';  // Sostituisci con il server SMTP
             $mail->SMTPAuth = true;
-            $mail->Username = 'info@finvideoholding.it';  // Sostituisci con la tua email
+            $mail->Username = 'info@finvideoholding.it';  // Sostituisci con il tuo indirizzo email
             $mail->Password = 'ABC123def?';  // Sostituisci con la tua password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            $mail->Port = 465;
+            $mail->Port = 587;  // O 25 se preferisci
 
             $mail->setFrom('info@finvideoholding.it', 'Segreteria');  // Sostituisci con il tuo indirizzo e nome
             $mail->addAddress('info@finvideoholding.it');  // La tua email dove ricevere i messaggi
