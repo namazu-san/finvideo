@@ -138,6 +138,40 @@
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function() {
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault();
+
+            const data = {
+                nome: $('#nome').val(),
+                cognome: $('#cognome').val(),
+                email: $('#email').val(),
+                telefono: $('#telefono').val(),
+                messaggio: $('#messaggio').val(),
+            };
+
+            $.ajax({
+                url: 'https://api.github.com/repos/{owner}/{repo}/dispatches',
+                type: 'POST',
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader("Authorization", "Bearer YOUR_GITHUB_TOKEN");
+                },
+                data: JSON.stringify({
+                    event_type: 'contact_form_submission',
+                    client_payload: data
+                }),
+                contentType: 'application/json',
+                success: function(response) {
+                    alert('Email inviata con successo.');
+                },
+                error: function(response) {
+                    alert('Errore nell\'invio dell\'email.');
+                }
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
         function loadSection(sectionId, filePath, callback) {
             $(sectionId).load(filePath, function(response, status, xhr) {
                 if (status == "error") {
