@@ -153,7 +153,7 @@
                 url: 'https://api.github.com/repos/{owner}/{repo}/dispatches',
                 type: 'POST',
                 beforeSend: function(xhr) {
-                    xhr.setRequestHeader("Authorization", "Bearer YOUR_GITHUB_TOKEN");
+                    xhr.setRequestHeader("Authorization", "Bearer TOKEN");
                 },
                 data: JSON.stringify({
                     event_type: 'contact_form_submission',
