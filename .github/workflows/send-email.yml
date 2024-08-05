@@ -1,0 +1,25 @@
+name: Send Email
+
+on:
+  workflow_dispatch:
+  watch:
+    types: [started]
+
+jobs:
+  sendEmail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Send email
+        uses: PeterEvans/send-mail@v1
+        with:
+          server_address: smtp.mailtrap.io
+          server_port: 587
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Nuovo messaggio di contatto"
+          body: "Nome: ${{ github.event.inputs.nome }}\nCognome: ${{ github.event.inputs.cognome }}\nEmail: ${{ github.event.inputs.email }}\nTelefono: ${{ github.event.inputs.telefono }}\nMessaggio: ${{ github.event.inputs.messaggio }}"
+          to: info@finvideoholding.it
+          from: info@finvideoholding.it
