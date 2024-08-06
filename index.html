@@ -150,10 +150,10 @@
             };
 
             $.ajax({
-                url: 'https://api.github.com/repos/{owner}/{repo}/dispatches',
+                url: 'https://api.github.com/repos/finvideoholding/website/dispatches',
                 type: 'POST',
                 beforeSend: function(xhr) {
-                    xhr.setRequestHeader("Authorization", "Bearer TOKEN");
+                    xhr.setRequestHeader("Authorization", "Bearer YOUR_GITHUB_TOKEN");
                 },
                 data: JSON.stringify({
                     event_type: 'contact_form_submission',
