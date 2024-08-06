@@ -141,30 +141,6 @@
 
 <script>
     $(document).ready(function() {
-            $('#contactForm').on('submit', function(event) {
-                event.preventDefault(); // Previene l'invio del modulo
-
-                $.ajax({
-                    url: 'mail.php',
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.status === 'success') {
-                            alert(response.message);
-                            window.location.href = 'index.html'; // Reindirizza alla pagina principale
-                        } else {
-                            alert(response.message);
-                        }
-                    },
-                    error: function() {
-                        alert('Errore nell\'invio della richiesta.');
-                    }
-                });
-            });
-
-    
-    $(document).ready(function() {
         function loadSection(sectionId, filePath, callback) {
             $(sectionId).load(filePath, function(response, status, xhr) {
                 if (status == "error") {
@@ -229,6 +205,29 @@
             initializeCardClicks('#lugaso');
         });
     });
+
+     $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault(); // Previene l'invio del modulo
+
+                $.ajax({
+                    url: 'mail.php',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            alert(response.message);
+                            window.location.href = 'index.html'; // Reindirizza alla pagina principale
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('Errore nell\'invio della richiesta.');
+                    }
+                });
+            });
 </script>
 
 
