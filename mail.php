@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Imposta gli header dell'email
     $headers = "From: info@finvideoholding.it\r\n";
-    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Reply-To: info@finvideoholding.it\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
