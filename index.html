@@ -131,31 +131,7 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#contactForm').on('submit', function(event) {
-        event.preventDefault(); // Previene il comportamento predefinito del modulo
 
-        $.ajax({
-            url: 'mail.php',
-            type: 'POST',
-            data: $(this).serialize(),
-            dataType: 'json',
-            success: function(response) {
-                if (response.status === 'success') {
-                    alert(response.message);
-                    window.location.href = 'index.html';
-                } else {
-                    alert(response.message);
-                }
-            },
-            error: function() {
-                alert('Errore nell\'invio della richiesta.');
-            }
-        });
-    });
-});
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="assets/js/isotope.min.js"></script>
@@ -164,6 +140,30 @@ $(document).ready(function() {
 <script src="assets/js/custom.js"></script>
 
 <script>
+    $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault(); // Previene l'invio del modulo
+
+                $.ajax({
+                    url: 'mail.php',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            alert(response.message);
+                            window.location.href = 'index.html'; // Reindirizza alla pagina principale
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('Errore nell\'invio della richiesta.');
+                    }
+                });
+            });
+
+    
     $(document).ready(function() {
         function loadSection(sectionId, filePath, callback) {
             $(sectionId).load(filePath, function(response, status, xhr) {
