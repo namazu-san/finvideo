@@ -97,6 +97,7 @@
 <!-- Contatti Section -->
 <section id="contatti" class="container">
     <h2 class="section-title">Contattaci</h2>
+    <form id="contactForm" autocomplete="off" method="POST" action="mail.php">
     <form id="contactForm">
         <div class="form-group meil">
             <label for="nome">Nome</label>
@@ -152,7 +153,7 @@
             };
 
             $.ajax({
-                url: 'mail.php',
+                url: 'send_mail.php',
                 type: 'POST',
                 data: data,
                 dataType: 'json',
