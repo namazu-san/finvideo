@@ -137,7 +137,7 @@ $(document).ready(function() {
         event.preventDefault(); // Previene il comportamento predefinito del modulo
 
         $.ajax({
-            url: 'send_mail.php',
+            url: 'mail.php',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
