@@ -139,37 +139,7 @@
 <script src="assets/js/owl-carousel.js"></script>
 <script src="assets/js/counter.js"></script>
 <script src="assets/js/custom.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#contactForm').on('submit', function(event) {
-            event.preventDefault();
 
-            const data = {
-                nome: $('#nome').val(),
-                cognome: $('#cognome').val(),
-                email: $('#email').val(),
-                telefono: $('#telefono').val(),
-                messaggio: $('#messaggio').val(),
-            };
-
-            $.ajax({
-                url: 'mail.php',
-                type: 'POST',
-                data: data,
-                dataType: 'json',
-                success: function(response) {
-                    $('#responseMessage').text(response.message).addClass(response.status === 'success' ? 'text-success' : 'text-danger');
-                    if (response.status === 'success') {
-                        $('#contactForm')[0].reset();
-                    }
-                },
-                error: function() {
-                    $('#responseMessage').text('Errore nella richiesta.').addClass('text-danger');
-                }
-            });
-        });
-    });
-</script>
 <script>
     $(document).ready(function() {
         function loadSection(sectionId, filePath, callback) {
