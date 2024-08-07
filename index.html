@@ -87,7 +87,7 @@
 <!-- Contatti Section -->
 <section id="contatti" class="container">
     <h2 class="section-title">Contattaci</h2>
-    <form id="contactForm" method="POST">
+    <form id="contactForm" method="POST" action="https://www.archiviovppay.it/privato/mail.php">
         <div class="form-group meil">
             <label for="nome">Nome</label>
             <input type="text" class="form-control" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
@@ -192,41 +192,6 @@
         });
     });
 </script>
-<script>
-    jQuery(document).ready(function($) {
-        console.log("jQuery è caricato correttamente!");
 
-        $('#contactForm').on('submit', function(event) {
-            event.preventDefault(); // Previene l'invio del modulo
-
-            console.log("Form submission intercepted!");
-
-            $.ajax({
-                url: 'https://altrosito.com/path/to/your/endpoint.php', // URL del tuo endpoint su Aruba
-                type: 'POST',
-                data: $(this).serialize(),
-                dataType: 'json',
-                success: function(response) {
-                    console.log("AJAX request successful!");
-                    console.log(response);
-
-                    if (response.status === 'success') {
-                        alert(response.message);
-                        $('#contactForm')[0].reset(); // Resetta il modulo
-                    } else {
-                        alert(response.message);
-                    }
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log("AJAX request failed!");
-                    console.log("Status: " + textStatus);
-                    console.log("Error: " + errorThrown);
-                    console.log("Response Text: " + jqXHR.responseText);
-                    alert('Errore nell\'invio della richiesta.');
-                }
-            });
-        });
-    });
-</script>
 </body>
 </html>
