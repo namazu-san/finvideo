@@ -7,6 +7,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono = htmlspecialchars($_POST['telefono']);
     $messaggio = htmlspecialchars($_POST['messaggio']);
 
+    // Carica le configurazioni SMTP dal file config.php
+    $config = include 'config.php';
+
     // Imposta gli header dell'email
     $headers = "From: info@finvideoholding.it\r\n";
     $headers .= "Reply-To: info@finvideoholding.it\r\n";
@@ -17,7 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = 'Nuovo messaggio di contatto';
     $body = "Nome: $nome\nCognome o Ragione Sociale: $cognome\nEmail: $email\nTelefono: $telefono\nMessaggio:\n$messaggio";
 
-    // Invia l'email a info@finvideoholding.it
+    // Configura le impostazioni SMTP
+    ini_set('SMTP', $config['smtp_server']);
+    ini_set('smtp_port', $config['smtp_port']);
+    ini_set('sendmail_from', $config['smtp_user']);
+
+    // Invia l'email
     if (mail('info@finvideoholding.it', $subject, $body, $headers)) {
         echo json_encode(['status' => 'success', 'message' => 'Email inviata con successo.']);
     } else {
