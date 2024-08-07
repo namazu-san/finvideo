@@ -129,16 +129,16 @@
     $(document).ready(function() {
         $('#contactForm').on('submit', function(event) {
             event.preventDefault(); // Previene l'invio del modulo
-
+    
             $.ajax({
-                url: 'mail.php',
+                url: 'https://www.archiviovppay.it/privato/mail.php', // URL del tuo endpoint su Aruba
                 type: 'POST',
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(response) {
                     if (response.status === 'success') {
                         alert(response.message);
-                        window.location.href = 'index.html';
+                        $('#contactForm')[0].reset(); // Resetta il modulo
                     } else {
                         alert(response.message);
                     }
@@ -148,6 +148,7 @@
                 }
             });
         });
+    });
 
         function loadSection(sectionId, filePath, callback) {
             $(sectionId).load(filePath, function(response, status, xhr) {
