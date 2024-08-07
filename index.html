@@ -193,11 +193,11 @@
     });
 </script>
 <script>
-    $(document).ready(function() {
+   jQuery(document).ready(function($) {
     $('#contactForm').on('submit', function(event) {
         event.preventDefault(); // Previene l'invio del modulo
 
-        $.ajax({
+        jQuery.ajax({
             url: 'https://www.archiviovppay.it/privato/mail.php', // URL del tuo endpoint su Aruba
             type: 'POST',
             data: $(this).serialize(),
