@@ -127,29 +127,6 @@
 
 <script>
     $(document).ready(function() {
-        $('#contactForm').on('submit', function(event) {
-            event.preventDefault(); // Previene l'invio del modulo
-    
-            $.ajax({
-                url: 'https://www.archiviovppay.it/privato/mail.php', // URL del tuo endpoint su Aruba
-                type: 'POST',
-                data: $(this).serialize(),
-                dataType: 'json',
-                success: function(response) {
-                    if (response.status === 'success') {
-                        alert(response.message);
-                        $('#contactForm')[0].reset(); // Resetta il modulo
-                    } else {
-                        alert(response.message);
-                    }
-                },
-                error: function() {
-                    alert('Errore nell\'invio della richiesta.');
-                }
-            });
-        });
-    });
-
         function loadSection(sectionId, filePath, callback) {
             $(sectionId).load(filePath, function(response, status, xhr) {
                 if (status == "error") {
@@ -176,10 +153,13 @@
             });
         }
 
+
+
         loadSection('#navbar', 'navbar.html');
         loadSection('#home', 'demo.html');
         loadSection('#partner', 'partner.html');
         loadSection('#footer', 'footer1.html');
+        
 
         loadSection('#syssic', 'syssic.html', function() {
             initializeCarousel('#syssic');
@@ -212,6 +192,31 @@
         });
     });
 </script>
+    $(document).ready(function() {
+    $('#contactForm').on('submit', function(event) {
+        event.preventDefault(); // Previene l'invio del modulo
 
+        $.ajax({
+            url: 'https://altrosito.com/path/to/your/endpoint.php', // URL del tuo endpoint su Aruba
+            type: 'POST',
+            data: $(this).serialize(),
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    alert(response.message);
+                    $('#contactForm')[0].reset(); // Resetta il modulo
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function() {
+                alert('Errore nell\'invio della richiesta.');
+            }
+        });
+    });
+});
+
+<script>
+</script>
 </body>
 </html>
