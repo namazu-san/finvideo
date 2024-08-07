@@ -87,7 +87,7 @@
 <!-- Contatti Section -->
 <section id="contatti" class="container">
     <h2 class="section-title">Contattaci</h2>
-    <form id="contactForm" method="POST" action="https://www.archiviovppay.it/privato/mail.php">
+    <form id="contactForm">
         <div class="form-group meil">
             <label for="nome">Nome</label>
             <input type="text" class="form-control" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
@@ -110,6 +110,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Invia</button>
     </form>
+    <div id="responseMessage"></div>
 </section>
 
 <!-- Footer Section -->
@@ -189,6 +190,28 @@
         loadSection('#lugaso', 'lugas.html', function() {
             initializeSwiper('#lugaso');
             initializeCardClicks('#lugaso');
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault(); // Previene l'invio del modulo
+             
+            $.ajax({
+                url: 'https://www.archiviovppay.it/privato/mail.php', // URL del file PHP
+                type: 'POST',
+                data: $(this).serialize(), // Serializza i dati del modulo
+                dataType: 'json',
+                success: function(response) {
+                    // Gestisci la risposta del server
+                    $('#responseMessage').text(response.message);
+                },
+                error: function(xhr, status, error) {
+                    // Gestisci l'errore
+                    $('#responseMessage').text('Errore: ' + xhr.responseText);
+                }
+            });
         });
     });
 </script>
