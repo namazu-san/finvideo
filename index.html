@@ -202,7 +202,7 @@
             console.log("Form submission intercepted!");
 
             $.ajax({
-                url: 'https://www.archiviovppay.it/privato/mail.php', // URL del tuo endpoint su Aruba
+                url: 'https://altrosito.com/path/to/your/endpoint.php', // URL del tuo endpoint su Aruba
                 type: 'POST',
                 data: $(this).serialize(),
                 dataType: 'json',
@@ -221,6 +221,7 @@
                     console.log("AJAX request failed!");
                     console.log("Status: " + textStatus);
                     console.log("Error: " + errorThrown);
+                    console.log("Response Text: " + jqXHR.responseText);
                     alert('Errore nell\'invio della richiesta.');
                 }
             });
