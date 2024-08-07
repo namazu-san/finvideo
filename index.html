@@ -193,31 +193,39 @@
     });
 </script>
 <script>
-   jQuery(document).ready(function($) {
-    $('#contactForm').on('submit', function(event) {
-        event.preventDefault(); // Previene l'invio del modulo
+    $(document).ready(function() {
+        console.log("jQuery è caricato correttamente!");
 
-        jQuery.ajax({
-            url: 'https://www.archiviovppay.it/privato/mail.php', // URL del tuo endpoint su Aruba
-            type: 'POST',
-            data: $(this).serialize(),
-            dataType: 'json',
-            success: function(response) {
-                if (response.status === 'success') {
-                    alert(response.message);
-                    $('#contactForm')[0].reset(); // Resetta il modulo
-                } else {
-                    alert(response.message);
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault(); // Previene l'invio del modulo
+
+            console.log("Form submission intercepted!");
+
+            $.ajax({
+                url: 'https://altrosito.com/path/to/your/endpoint.php', // URL del tuo endpoint su Aruba
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(response) {
+                    console.log("AJAX request successful!");
+                    console.log(response);
+
+                    if (response.status === 'success') {
+                        alert(response.message);
+                        $('#contactForm')[0].reset(); // Resetta il modulo
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log("AJAX request failed!");
+                    console.log("Status: " + textStatus);
+                    console.log("Error: " + errorThrown);
+                    alert('Errore nell\'invio della richiesta.');
                 }
-            },
-            error: function() {
-                alert('Errore nell\'invio della richiesta.');
-            }
+            });
         });
     });
-});
-
-
 </script>
 </body>
 </html>
